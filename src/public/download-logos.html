@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download Logos - Inspired Energy Optimizer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 40px 20px;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #22c55e 0%, #38bdf8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .subtitle {
+      color: #94a3b8;
+      font-size: 1.125rem;
+      margin-bottom: 3rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .logo-card {
+      background: rgba(31, 41, 55, 0.4);
+      backdrop-filter: blur(12px);
+      border: 1px solid #334155;
+      border-radius: 1rem;
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .logo-card:hover {
+      border-color: #22c55e;
+      transform: translateY(-4px);
+    }
+
+    .logo-preview {
+      background: #1f2937;
+      border-radius: 0.75rem;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 150px;
+    }
+
+    .logo-preview img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .logo-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #f8fafc;
+    }
+
+    .logo-size {
+      color: #94a3b8;
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    button {
+      padding: 0.625rem 1.25rem;
+      border-radius: 0.5rem;
+      border: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      flex: 1;
+      min-width: 100px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #22c55e 0%, #38bdf8 100%);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid #334155;
+      color: #f8fafc;
+    }
+
+    .btn-secondary:hover {
+      border-color: #22c55e;
+    }
+
+    .instructions {
+      background: rgba(31, 41, 55, 0.4);
+      backdrop-filter: blur(12px);
+      border: 1px solid #334155;
+      border-radius: 1rem;
+      padding: 2rem;
+      margin-top: 3rem;
+    }
+
+    .instructions h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #38bdf8;
+    }
+
+    .instructions ol {
+      margin-left: 1.5rem;
+      color: #94a3b8;
+    }
+
+    .instructions li {
+      margin-bottom: 0.5rem;
+    }
+
+    .instructions a {
+      color: #22c55e;
+      text-decoration: none;
+    }
+
+    .instructions a:hover {
+      text-decoration: underline;
+    }
+
+    .size-selector {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .size-btn {
+      padding: 0.5rem 0.75rem;
+      background: transparent;
+      border: 1px solid #334155;
+      color: #94a3b8;
+      border-radius: 0.375rem;
+      font-size: 0.75rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      min-width: auto;
+      flex: none;
+    }
+
+    .size-btn:hover {
+      border-color: #22c55e;
+      color: #22c55e;
+    }
+
+    canvas {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎨 Logo Downloads</h1>
+    <p class="subtitle">Preview and download your Inspired Energy Optimizer logos in various formats</p>
+
+    <div class="grid">
+      <!-- Favicon -->
+      <div class="logo-card">
+        <div class="logo-preview">
+          <img src="favicon.svg" alt="Favicon" id="favicon-preview">
+        </div>
+        <div class="logo-title">Favicon</div>
+        <div class="logo-size">32×32px - Perfect for browser tabs</div>
+        <div class="button-group">
+          <button class="btn-primary" onclick="downloadSVG('favicon.svg', 'favicon')">Download SVG</button>
+          <button class="btn-secondary" onclick="convertToPNG('favicon-preview', 'favicon', 128)">PNG 128px</button>
+        </div>
+        <div class="size-selector">
+          <button class="size-btn" onclick="convertToPNG('favicon-preview', 'favicon', 32)">32px</button>
+          <button class="size-btn" onclick="convertToPNG('favicon-preview', 'favicon', 64)">64px</button>
+          <button class="size-btn" onclick="convertToPNG('favicon-preview', 'favicon', 128)">128px</button>
+          <button class="size-btn" onclick="convertToPNG('favicon-preview', 'favicon', 256)">256px</button>
+        </div>
+      </div>
+
+      <!-- Logo Icon -->
+      <div class="logo-card">
+        <div class="logo-preview">
+          <img src="logo-icon.svg" alt="Logo Icon" id="icon-preview">
+        </div>
+        <div class="logo-title">Logo Icon</div>
+        <div class="logo-size">80×80px - App icons & avatars</div>
+        <div class="button-group">
+          <button class="btn-primary" onclick="downloadSVG('logo-icon.svg', 'logo-icon')">Download SVG</button>
+          <button class="btn-secondary" onclick="convertToPNG('icon-preview', 'logo-icon', 512)">PNG 512px</button>
+        </div>
+        <div class="size-selector">
+          <button class="size-btn" onclick="convertToPNG('icon-preview', 'logo-icon', 128)">128px</button>
+          <button class="size-btn" onclick="convertToPNG('icon-preview', 'logo-icon', 256)">256px</button>
+          <button class="size-btn" onclick="convertToPNG('icon-preview', 'logo-icon', 512)">512px</button>
+          <button class="size-btn" onclick="convertToPNG('icon-preview', 'logo-icon', 1024)">1024px</button>
+        </div>
+      </div>
+
+      <!-- Logo Full -->
+      <div class="logo-card">
+        <div class="logo-preview">
+          <img src="logo-full.svg" alt="Full Logo" id="full-preview" style="max-width: 100%;">
+        </div>
+        <div class="logo-title">Full Logo</div>
+        <div class="logo-size">400×60px - Website headers</div>
+        <div class="button-group">
+          <button class="btn-primary" onclick="downloadSVG('logo-full.svg', 'logo-full')">Download SVG</button>
+          <button class="btn-secondary" onclick="convertToPNG('full-preview', 'logo-full', 800, 120)">PNG 2x</button>
+        </div>
+        <div class="size-selector">
+          <button class="size-btn" onclick="convertToPNG('full-preview', 'logo-full', 400, 60)">1x</button>
+          <button class="size-btn" onclick="convertToPNG('full-preview', 'logo-full', 800, 120)">2x</button>
+          <button class="size-btn" onclick="convertToPNG('full-preview', 'logo-full', 1200, 180)">3x</button>
+        </div>
+      </div>
+
+      <!-- Logo Horizontal -->
+      <div class="logo-card">
+        <div class="logo-preview">
+          <img src="logo-horizontal.svg" alt="Horizontal Logo" id="horizontal-preview" style="max-width: 100%;">
+        </div>
+        <div class="logo-title">Horizontal Logo</div>
+        <div class="logo-size">500×80px - Banners & presentations</div>
+        <div class="button-group">
+          <button class="btn-primary" onclick="downloadSVG('logo-horizontal.svg', 'logo-horizontal')">Download SVG</button>
+          <button class="btn-secondary" onclick="convertToPNG('horizontal-preview', 'logo-horizontal', 1000, 160)">PNG 2x</button>
+        </div>
+        <div class="size-selector">
+          <button class="size-btn" onclick="convertToPNG('horizontal-preview', 'logo-horizontal', 500, 80)">1x</button>
+          <button class="size-btn" onclick="convertToPNG('horizontal-preview', 'logo-horizontal', 1000, 160)">2x</button>
+          <button class="size-btn" onclick="convertToPNG('horizontal-preview', 'logo-horizontal', 1500, 240)">3x</button>
+        </div>
+      </div>
+
+      <!-- Logo Stacked -->
+      <div class="logo-card">
+        <div class="logo-preview">
+          <img src="logo-stacked.svg" alt="Stacked Logo" id="stacked-preview">
+        </div>
+        <div class="logo-title">Stacked Logo</div>
+        <div class="logo-size">320×140px - Vertical layouts</div>
+        <div class="button-group">
+          <button class="btn-primary" onclick="downloadSVG('logo-stacked.svg', 'logo-stacked')">Download SVG</button>
+          <button class="btn-secondary" onclick="convertToPNG('stacked-preview', 'logo-stacked', 640, 280)">PNG 2x</button>
+        </div>
+        <div class="size-selector">
+          <button class="size-btn" onclick="convertToPNG('stacked-preview', 'logo-stacked', 320, 140)">1x</button>
+          <button class="size-btn" onclick="convertToPNG('stacked-preview', 'logo-stacked', 640, 280)">2x</button>
+          <button class="size-btn" onclick="convertToPNG('stacked-preview', 'logo-stacked', 960, 420)">3x</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="instructions">
+      <h2>📥 How to Download</h2>
+      <ol>
+        <li><strong>SVG (Recommended):</strong> Click "Download SVG" to get the scalable vector version - best for web and design tools</li>
+        <li><strong>PNG (Quick):</strong> Click any PNG button to instantly download a PNG at that size</li>
+        <li><strong>Custom Size:</strong> Use the size buttons below each logo to download different resolutions</li>
+        <li><strong>Online Converter:</strong> For custom sizes, download the SVG and use <a href="https://cloudconvert.com/svg-to-png" target="_blank">CloudConvert</a> or <a href="https://svgtopng.com/" target="_blank">SVGtoPNG.com</a></li>
+      </ol>
+    </div>
+  </div>
+
+  <canvas id="canvas"></canvas>
+
+  <script>
+    // Download SVG directly
+    function downloadSVG(filename, saveName) {
+      const link = document.createElement('a');
+      link.href = filename;
+      link.download = saveName + '.svg';
+      link.click();
+    }
+
+    // Convert SVG to PNG and download
+    function convertToPNG(imgId, saveName, width, height = null) {
+      const img = document.getElementById(imgId);
+      const canvas = document.getElementById('canvas');
+      const ctx = canvas.getContext('2d');
+
+      // If height not provided, use width (square)
+      if (!height) {
+        height = width;
+      }
+
+      canvas.width = width;
+      canvas.height = height;
+
+      // Create a new image to ensure it's fully loaded
+      const tempImg = new Image();
+      tempImg.onload = function() {
+        // Clear canvas
+        ctx.clearRect(0, 0, width, height);
+        
+        // Draw image on canvas
+        ctx.drawImage(tempImg, 0, 0, width, height);
+        
+        // Convert to PNG and download
+        canvas.toBlob(function(blob) {
+          const url = URL.createObjectURL(blob);
+          const link = document.createElement('a');
+          link.href = url;
+          link.download = `${saveName}-${width}x${height}.png`;
+          link.click();
+          URL.revokeObjectURL(url);
+        }, 'image/png');
+      };
+      
+      tempImg.src = img.src;
+    }
+  </script>
+</body>
+</html>

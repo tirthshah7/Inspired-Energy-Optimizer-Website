@@ -1,0 +1,29 @@
+<svg width="500" height="80" viewBox="0 0 500 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="horizontalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#22c55e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38bdf8;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glow Filter -->
+    <filter id="horizontalGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Logo Icon Background -->
+  <rect x="10" y="15" width="50" height="50" rx="12" fill="url(#horizontalGradient)" filter="url(#horizontalGlow)"/>
+  
+  <!-- Lightning Bolt Icon -->
+  <path d="M38 25L28 42H35L32 55L42 38H35L38 25Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Text: Inspired Energy Optimizer -->
+  <text x="80" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="600" fill="#f8fafc" letter-spacing="-0.02em">
+    Inspired Energy Optimizer
+  </text>
+</svg>
