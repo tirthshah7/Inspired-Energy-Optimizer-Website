@@ -1,13 +1,29 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Zap, Menu } from 'lucide-react';
-import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from './ui/sheet';
+import { Zap, Menu, X } from 'lucide-react';
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
   
   const isActive = (path: string) => location.pathname === path;
+
+  // Close menu when route changes
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [location.pathname]);
+
+  // Prevent body scroll when menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [mobileMenuOpen]);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-[#334155] bg-[#0f172a]/80 backdrop-blur-md">
@@ -66,24 +82,31 @@ export function Header() {
             </Link>
           </nav>
 
-          {/* Mobile Menu */}
-          <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
-            <SheetTrigger asChild>
-              <button 
-                className="md:hidden text-[#f8fafc] p-2 -mr-2 touch-manipulation"
-                aria-label="Open navigation menu"
-              >
-                <Menu className="w-6 h-6" />
-              </button>
-            </SheetTrigger>
-            <SheetContent side="right" className="bg-[#0f172a] border-[#334155]">
-              <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
-              <SheetDescription className="sr-only">Main navigation links for Inspired Energy Optimizer</SheetDescription>
-              <div className="flex flex-col gap-4 pt-4">
+          {/* Mobile Menu Button */}
+          <button 
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden text-[#f8fafc] p-2 -mr-2 z-50 relative"
+            aria-label="Toggle navigation menu"
+          >
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+
+        {/* Mobile Menu Overlay */}
+        {mobileMenuOpen && (
+          <>
+            {/* Backdrop */}
+            <div 
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 md:hidden"
+              onClick={() => setMobileMenuOpen(false)}
+            />
+            
+            {/* Menu Panel */}
+            <div className="fixed top-0 right-0 bottom-0 w-[280px] bg-[#0f172a] border-l border-[#334155] z-50 md:hidden overflow-y-auto">
+              <div className="flex flex-col gap-4 p-6 pt-20">
                 <Link
                   to="/product"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`text-left px-4 py-3 rounded-lg transition-colors cursor-pointer relative z-10 ${
+                  className={`text-left px-4 py-3 rounded-lg transition-all ${
                     isActive('/product')
                       ? 'text-[#f8fafc] bg-[#22c55e]/10 border border-[#22c55e]/30'
                       : 'text-[#94a3b8] hover:text-[#f8fafc] hover:bg-[#1f2937]'
@@ -93,8 +116,7 @@ export function Header() {
                 </Link>
                 <Link
                   to="/solutions"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`text-left px-4 py-3 rounded-lg transition-colors cursor-pointer relative z-10 ${
+                  className={`text-left px-4 py-3 rounded-lg transition-all ${
                     isActive('/solutions')
                       ? 'text-[#f8fafc] bg-[#22c55e]/10 border border-[#22c55e]/30'
                       : 'text-[#94a3b8] hover:text-[#f8fafc] hover:bg-[#1f2937]'
@@ -104,8 +126,7 @@ export function Header() {
                 </Link>
                 <Link
                   to="/about"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`text-left px-4 py-3 rounded-lg transition-colors cursor-pointer relative z-10 ${
+                  className={`text-left px-4 py-3 rounded-lg transition-all ${
                     isActive('/about')
                       ? 'text-[#f8fafc] bg-[#22c55e]/10 border border-[#22c55e]/30'
                       : 'text-[#94a3b8] hover:text-[#f8fafc] hover:bg-[#1f2937]'
@@ -115,8 +136,7 @@ export function Header() {
                 </Link>
                 <Link
                   to="/contact"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`text-left px-4 py-3 rounded-lg transition-colors cursor-pointer relative z-10 ${
+                  className={`text-left px-4 py-3 rounded-lg transition-all ${
                     isActive('/contact')
                       ? 'text-[#f8fafc] bg-[#22c55e]/10 border border-[#22c55e]/30'
                       : 'text-[#94a3b8] hover:text-[#f8fafc] hover:bg-[#1f2937]'
@@ -124,19 +144,18 @@ export function Header() {
                 >
                   Contact
                 </Link>
-                <div className="pt-4 border-t border-[#334155] relative z-10">
+                <div className="pt-4 border-t border-[#334155]">
                   <Link
                     to="/contact"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block w-full px-4 py-3 rounded-lg gradient-primary text-white hover:glow-soft transition-all text-center cursor-pointer"
+                    className="block w-full px-4 py-3 rounded-lg gradient-primary text-white hover:glow-soft transition-all text-center"
                   >
                     Book Demo
                   </Link>
                 </div>
               </div>
-            </SheetContent>
-          </Sheet>
-        </div>
+            </div>
+          </>
+        )}
       </div>
     </header>
   );
