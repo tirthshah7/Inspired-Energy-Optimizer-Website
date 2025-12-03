@@ -76,10 +76,10 @@ export function Header() {
                 <Menu className="w-6 h-6" />
               </button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-[#0f172a] border-[#334155] w-80 z-[100]">
+            <SheetContent side="right" className="bg-[#0f172a] border-[#334155]">
               <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
               <SheetDescription className="sr-only">Main navigation links for Inspired Energy Optimizer</SheetDescription>
-              <div className="flex flex-col gap-6 mt-8 relative z-10">
+              <div className="flex flex-col gap-4 pt-4">
                 <Link
                   to="/product"
                   onClick={() => setMobileMenuOpen(false)}
