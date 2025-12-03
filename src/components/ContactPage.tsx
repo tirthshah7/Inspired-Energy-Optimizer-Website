@@ -5,19 +5,19 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Email',
-    detail: 'hello@inspiredenergy.com',
+    detail: 'theinspiredtechlabs@gmail.com',
     color: '#22c55e',
   },
   {
     icon: Phone,
     title: 'Phone',
-    detail: '+1 (555) 123-4567',
+    detail: '+1 (226) 724-2781',
     color: '#38bdf8',
   },
   {
     icon: MapPin,
     title: 'Location',
-    detail: 'San Francisco, CA',
+    detail: 'Windsor, Ontario',
     color: '#a855f7',
   },
   {
@@ -37,10 +37,42 @@ export function ContactPage() {
     message: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      const response = await fetch('https://formspree.io/f/mvgerekn', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          organization: '',
+          facilityType: '',
+          message: '',
+        });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -243,11 +275,24 @@ export function ContactPage() {
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    className="w-full px-8 py-4 rounded-xl gradient-primary text-white hover:glow-soft transition-all flex items-center justify-center gap-2 group"
+                    disabled={isSubmitting}
+                    className="w-full px-8 py-4 rounded-xl gradient-primary text-white hover:glow-soft transition-all flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Book My Demo
+                    {isSubmitting ? 'Sending...' : 'Book My Demo'}
                     <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </button>
+
+                  {/* Success/Error Messages */}
+                  {submitStatus === 'success' && (
+                    <div className="p-4 bg-[#22c55e]/10 border border-[#22c55e]/30 rounded-lg text-[#22c55e] text-center">
+                      ✓ Thank you! We'll be in touch within 24 hours.
+                    </div>
+                  )}
+                  {submitStatus === 'error' && (
+                    <div className="p-4 bg-[#ef4444]/10 border border-[#ef4444]/30 rounded-lg text-[#ef4444] text-center">
+                      Something went wrong. Please email us directly at theinspiredtechlabs@gmail.com
+                    </div>
+                  )}
 
                   {/* Privacy Note */}
                   <p className="text-[#94a3b8] text-sm text-center">
