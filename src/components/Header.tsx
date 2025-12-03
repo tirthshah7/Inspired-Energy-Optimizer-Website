@@ -69,7 +69,10 @@ export function Header() {
           {/* Mobile Menu */}
           <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
             <SheetTrigger asChild>
-              <button className="md:hidden text-[#f8fafc]">
+              <button 
+                className="md:hidden text-[#f8fafc] p-2 -mr-2 touch-manipulation"
+                aria-label="Open navigation menu"
+              >
                 <Menu className="w-6 h-6" />
               </button>
             </SheetTrigger>
