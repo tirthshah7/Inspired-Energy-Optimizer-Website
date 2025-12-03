@@ -97,57 +97,80 @@ export function Header() {
           <>
             {/* Backdrop */}
             <div 
-              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 md:hidden"
-              onClick={() => setMobileMenuOpen(false)}
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 md:hidden cursor-pointer"
+              onClick={(e) => {
+                e.stopPropagation();
+                setMobileMenuOpen(false);
+              }}
+              style={{ WebkitTapHighlightColor: 'transparent' }}
             />
             
             {/* Menu Panel */}
-            <div className="fixed top-0 right-0 bottom-0 w-[280px] bg-[#0f172a] border-l border-[#334155] z-50 md:hidden overflow-y-auto">
-              <div className="flex flex-col gap-4 p-6 pt-20">
+            <div className="fixed top-0 right-0 bottom-0 w-[280px] bg-[#0f172a] border-l border-[#334155] z-50 md:hidden overflow-y-auto shadow-2xl">
+              {/* Close Button */}
+              <button
+                onClick={() => setMobileMenuOpen(false)}
+                className="absolute top-4 right-4 p-2 text-[#f8fafc] hover:text-[#22c55e] transition-colors z-10"
+                aria-label="Close menu"
+              >
+                <X className="w-6 h-6" />
+              </button>
+              
+              <div className="flex flex-col gap-4 p-6 pt-16">
                 <Link
                   to="/product"
-                  className={`text-left px-4 py-3 rounded-lg transition-all ${
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`block px-4 py-3 rounded-lg transition-all ${
                     isActive('/product')
                       ? 'text-[#f8fafc] bg-[#22c55e]/10 border border-[#22c55e]/30'
                       : 'text-[#94a3b8] hover:text-[#f8fafc] hover:bg-[#1f2937]'
                   }`}
+                  style={{ pointerEvents: 'auto', cursor: 'pointer' }}
                 >
                   Product
                 </Link>
                 <Link
                   to="/solutions"
-                  className={`text-left px-4 py-3 rounded-lg transition-all ${
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`block px-4 py-3 rounded-lg transition-all ${
                     isActive('/solutions')
                       ? 'text-[#f8fafc] bg-[#22c55e]/10 border border-[#22c55e]/30'
                       : 'text-[#94a3b8] hover:text-[#f8fafc] hover:bg-[#1f2937]'
                   }`}
+                  style={{ pointerEvents: 'auto', cursor: 'pointer' }}
                 >
                   Solutions
                 </Link>
                 <Link
                   to="/about"
-                  className={`text-left px-4 py-3 rounded-lg transition-all ${
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`block px-4 py-3 rounded-lg transition-all ${
                     isActive('/about')
                       ? 'text-[#f8fafc] bg-[#22c55e]/10 border border-[#22c55e]/30'
                       : 'text-[#94a3b8] hover:text-[#f8fafc] hover:bg-[#1f2937]'
                   }`}
+                  style={{ pointerEvents: 'auto', cursor: 'pointer' }}
                 >
                   About
                 </Link>
                 <Link
                   to="/contact"
-                  className={`text-left px-4 py-3 rounded-lg transition-all ${
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`block px-4 py-3 rounded-lg transition-all ${
                     isActive('/contact')
                       ? 'text-[#f8fafc] bg-[#22c55e]/10 border border-[#22c55e]/30'
                       : 'text-[#94a3b8] hover:text-[#f8fafc] hover:bg-[#1f2937]'
                   }`}
+                  style={{ pointerEvents: 'auto', cursor: 'pointer' }}
                 >
                   Contact
                 </Link>
                 <div className="pt-4 border-t border-[#334155]">
                   <Link
                     to="/contact"
+                    onClick={() => setMobileMenuOpen(false)}
                     className="block w-full px-4 py-3 rounded-lg gradient-primary text-white hover:glow-soft transition-all text-center"
+                    style={{ pointerEvents: 'auto', cursor: 'pointer' }}
                   >
                     Book Demo
                   </Link>
