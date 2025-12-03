@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Zap, Menu } from 'lucide-react';
-import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from './ui/sheet';
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -76,9 +76,9 @@ export function Header() {
                 <Menu className="w-6 h-6" />
               </button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-[#0f172a] border-[#334155] w-80" aria-describedby="mobile-menu-description">
-              <h2 id="mobile-menu-title" className="sr-only">Navigation Menu</h2>
-              <p id="mobile-menu-description" className="sr-only">Main navigation links</p>
+            <SheetContent side="right" className="bg-[#0f172a] border-[#334155] w-80">
+              <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+              <SheetDescription className="sr-only">Main navigation links for Inspired Energy Optimizer</SheetDescription>
               <div className="flex flex-col gap-6 mt-8">
                 <Link
                   to="/product"
