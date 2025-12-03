@@ -50,8 +50,12 @@ export function ContactPage() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          _subject: 'New Demo Request - Inspired Energy Optimizer',
+        }),
       });
 
       if (response.ok) {
@@ -168,6 +172,9 @@ export function ContactPage() {
                 <h3 className="text-2xl text-[#f8fafc] mb-8">Book Your Demo</h3>
                 
                 <form onSubmit={handleSubmit} className="space-y-6 relative">
+                  {/* Honeypot field - prevents spam */}
+                  <input type="text" name="_gotcha" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
+                  
                   {/* Name */}
                   <div>
                     <label htmlFor="name" className="block text-[#f8fafc] mb-2">
