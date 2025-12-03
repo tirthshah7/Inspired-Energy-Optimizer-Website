@@ -76,14 +76,14 @@ export function Header() {
                 <Menu className="w-6 h-6" />
               </button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-[#0f172a] border-[#334155] w-80">
+            <SheetContent side="right" className="bg-[#0f172a] border-[#334155] w-80 z-[100]">
               <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
               <SheetDescription className="sr-only">Main navigation links for Inspired Energy Optimizer</SheetDescription>
-              <div className="flex flex-col gap-6 mt-8">
+              <div className="flex flex-col gap-6 mt-8 relative z-10">
                 <Link
                   to="/product"
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`text-left px-4 py-3 rounded-lg transition-colors ${
+                  className={`text-left px-4 py-3 rounded-lg transition-colors cursor-pointer relative z-10 ${
                     isActive('/product')
                       ? 'text-[#f8fafc] bg-[#22c55e]/10 border border-[#22c55e]/30'
                       : 'text-[#94a3b8] hover:text-[#f8fafc] hover:bg-[#1f2937]'
@@ -94,7 +94,7 @@ export function Header() {
                 <Link
                   to="/solutions"
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`text-left px-4 py-3 rounded-lg transition-colors ${
+                  className={`text-left px-4 py-3 rounded-lg transition-colors cursor-pointer relative z-10 ${
                     isActive('/solutions')
                       ? 'text-[#f8fafc] bg-[#22c55e]/10 border border-[#22c55e]/30'
                       : 'text-[#94a3b8] hover:text-[#f8fafc] hover:bg-[#1f2937]'
@@ -105,7 +105,7 @@ export function Header() {
                 <Link
                   to="/about"
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`text-left px-4 py-3 rounded-lg transition-colors ${
+                  className={`text-left px-4 py-3 rounded-lg transition-colors cursor-pointer relative z-10 ${
                     isActive('/about')
                       ? 'text-[#f8fafc] bg-[#22c55e]/10 border border-[#22c55e]/30'
                       : 'text-[#94a3b8] hover:text-[#f8fafc] hover:bg-[#1f2937]'
@@ -116,7 +116,7 @@ export function Header() {
                 <Link
                   to="/contact"
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`text-left px-4 py-3 rounded-lg transition-colors ${
+                  className={`text-left px-4 py-3 rounded-lg transition-colors cursor-pointer relative z-10 ${
                     isActive('/contact')
                       ? 'text-[#f8fafc] bg-[#22c55e]/10 border border-[#22c55e]/30'
                       : 'text-[#94a3b8] hover:text-[#f8fafc] hover:bg-[#1f2937]'
@@ -124,11 +124,11 @@ export function Header() {
                 >
                   Contact
                 </Link>
-                <div className="pt-4 border-t border-[#334155]">
+                <div className="pt-4 border-t border-[#334155] relative z-10">
                   <Link
                     to="/contact"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block w-full px-4 py-3 rounded-lg gradient-primary text-white hover:glow-soft transition-all text-center"
+                    className="block w-full px-4 py-3 rounded-lg gradient-primary text-white hover:glow-soft transition-all text-center cursor-pointer"
                   >
                     Book Demo
                   </Link>
