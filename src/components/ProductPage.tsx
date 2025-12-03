@@ -75,9 +75,14 @@ export function ProductPage() {
               Every dashboard, chart, and recommendation is designed to help operators make faster, more informed 
               decisions — without complex tools or hardware dependencies.
             </p>
-            <button className="px-8 py-4 rounded-xl gradient-primary text-white hover:glow-soft transition-all">
+            <a 
+              href="https://youtu.be/V71PE_jFGdU?si=cZBEBzkUNpRjG8O4"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-4 rounded-xl gradient-primary text-white hover:glow-soft transition-all"
+            >
               Explore Live Demo
-            </button>
+            </a>
           </div>
         </div>
       </section>

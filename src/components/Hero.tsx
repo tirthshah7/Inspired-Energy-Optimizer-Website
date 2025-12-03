@@ -67,10 +67,15 @@ export function Hero() {
               <button className="px-8 py-4 rounded-xl gradient-primary text-white hover:glow-soft transition-all">
                 Book a Demo
               </button>
-              <button className="px-8 py-4 rounded-xl border border-[#334155] text-[#f8fafc] hover:border-[#22c55e] transition-all flex items-center gap-2">
+              <a
+                href="https://youtu.be/V71PE_jFGdU?si=cZBEBzkUNpRjG8O4"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 rounded-xl border border-[#334155] text-[#f8fafc] hover:border-[#22c55e] transition-all flex items-center gap-2"
+              >
                 <Play className="w-4 h-4" />
-                Watch Overview (90 sec)
-              </button>
+                Watch Overview
+              </a>
             </div>
 
             {/* Live Status */}
