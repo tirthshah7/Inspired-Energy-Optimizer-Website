@@ -18,6 +18,8 @@ const SolutionsPage = lazy(() => import('./components/SolutionsPage').then(modul
 const AboutPage = lazy(() => import('./components/AboutPage').then(module => ({ default: module.AboutPage })));
 const ContactPage = lazy(() => import('./components/ContactPage').then(module => ({ default: module.ContactPage })));
 const PrivacyPolicyPage = lazy(() => import('./components/PrivacyPolicyPage').then(module => ({ default: module.PrivacyPolicyPage })));
+const SecuritySummaryPage = lazy(() => import('./components/SecuritySummaryPage').then(module => ({ default: module.SecuritySummaryPage })));
+const TermsOfServicePage = lazy(() => import('./components/TermsOfServicePage').then(module => ({ default: module.TermsOfServicePage })));
 
 // Loading fallback component
 function PageLoader() {
@@ -61,6 +63,8 @@ export default function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+            <Route path="/security" element={<SecuritySummaryPage />} />
+            <Route path="/terms-of-service" element={<TermsOfServicePage />} />
           </Routes>
         </Suspense>
         <Footer />

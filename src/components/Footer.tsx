@@ -66,8 +66,8 @@ export function Footer() {
           <p>&copy; 2025 Inspired Energy Optimizer. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="/privacy-policy" className="hover:text-[#22c55e] transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-[#22c55e] transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-[#22c55e] transition-colors">Security</a>
+            <a href="/terms-of-service" className="hover:text-[#22c55e] transition-colors">Terms of Service</a>
+            <a href="/security" className="hover:text-[#22c55e] transition-colors">Security</a>
           </div>
         </div>
       </div>
