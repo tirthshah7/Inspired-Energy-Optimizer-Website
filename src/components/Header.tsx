@@ -32,6 +32,14 @@ export function Header() {
           {/* Logo */}
           <Link
             to="/"
+            onClick={() => {
+              // Scroll to top when clicking brand name
+              window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'smooth',
+              });
+            }}
             className="flex items-center gap-3 hover:opacity-80 transition-opacity"
           >
             <div className="gradient-primary p-2.5 rounded-xl glow-soft">

@@ -1,11 +1,21 @@
 import { Check } from 'lucide-react';
 
 const proofPoints = [
-  'Up to 5–15% savings potential identified annually',
-  'No hardware lock-in — works with your existing systems',
-  'AI-driven visibility across all buildings',
-  'Action-first insights, not more spreadsheets',
-  'Scalable for portfolios, campuses, and industrial environments',
+  'Cloud-based — no new meters or hardware required.',
+  'Works alongside existing BMS, utility portals, and spreadsheets.',
+  'Designed for small pilots that can expand to portfolio scale.',
+  'Founder-led onboarding and support during early customers.',
+];
+
+const faqItems = [
+  {
+    question: 'What does a typical pilot look like?',
+    answer: 'Most pilots run for 6–12 weeks with 1–5 buildings. We focus on quick wins and a clear summary of actions, estimated savings ranges, and next steps.',
+  },
+  {
+    question: 'Do we need IT resources to get started?',
+    answer: 'Usually not. For most pilots we work with your energy or facilities team to access existing data exports or portals. API integrations can come later.',
+  },
 ];
 
 export function Proof() {
@@ -17,7 +27,7 @@ export function Proof() {
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-4xl text-[#f8fafc] mb-4">
-            Why leading teams choose the Inspired Energy Optimizer
+            Why teams choose Inspired Energy Optimizer for pilots
           </h2>
         </div>
 
@@ -36,6 +46,18 @@ export function Proof() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+
+        {/* FAQ Section */}
+        <div className="mt-16 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8">
+            {faqItems.map((item, index) => (
+              <div key={index} className="frosted-glass rounded-xl p-6 border border-[#334155]">
+                <h3 className="text-xl text-[#f8fafc] mb-3">{item.question}</h3>
+                <p className="text-[#94a3b8]">{item.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

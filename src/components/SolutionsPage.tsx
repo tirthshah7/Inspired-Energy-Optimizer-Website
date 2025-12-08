@@ -5,14 +5,12 @@ const solutions = [
   {
     icon: Building,
     title: 'Commercial Buildings',
-    headline: 'Smarter operations. Lower energy bills. Happier tenants.',
-    description: 'Commercial buildings deal with unpredictable occupancy, HVAC load swings, and rising energy costs. Inspired Energy Optimizer equips your operations team with real-time visibility and AI insights that turn complexity into control.',
+    headline: 'Give your operations team a clear, shared view.',
+    description: 'For offices, mixed-use sites, and retail, the platform helps align energy, operations, and tenant-experience teams around the same live data.',
     benefits: [
-      'Optimized HVAC scheduling',
-      'Peak demand avoidance',
-      'Weekend/holiday waste detection',
-      'Tenant comfort monitoring',
-      'Data-driven maintenance insights',
+      'Uncover scheduling gaps in HVAC and lighting.',
+      'Track comfort-related issues against equipment behavior.',
+      'Support ESG reporting with simple visual exports.',
     ],
     image: 'https://images.unsplash.com/photo-1694702740570-0a31ee1525c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBidWlsZGluZ3xlbnwxfHx8fDE3NjQzNzUwNTR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
     color: '#22c55e',
@@ -20,14 +18,12 @@ const solutions = [
   {
     icon: Factory,
     title: 'Industrial & Manufacturing',
-    headline: 'Detect inefficiencies, reduce downtime, and control high-load processes.',
-    description: 'Industrial facilities face intense energy fluctuations. Our platform helps you identify energy-heavy steps, reduce unnecessary runtime, and prevent anomalies that can impact production.',
+    headline: 'See how energy is tied to the way you run lines.',
+    description: 'Connect energy behavior to production schedules to find low-risk ways to trim energy without disrupting throughput.',
     benefits: [
-      'Production cycle energy mapping',
-      'High-load shift recommendations',
-      'Off-schedule equipment alerts',
-      'Real-time process anomaly detection',
-      'Peak shaving guidance',
+      'Map energy usage to shifts and production runs.',
+      'Highlight high-load steps to optimize first.',
+      'Flag off-shift loads and leaks.',
     ],
     image: 'https://images.unsplash.com/photo-1764114235916-74de69e6851f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwZmFjdG9yeSUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzY0MzkyNjQ1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
     color: '#38bdf8',
@@ -35,14 +31,12 @@ const solutions = [
   {
     icon: School,
     title: 'Campuses & Multi-Site Portfolios',
-    headline: 'One unified dashboard for all buildings. All locations. One click away.',
-    description: 'Managing multiple sites means multiple data silos. Inspired Energy Optimizer consolidates everything into a single command center.',
+    headline: 'One place to compare, prioritize, and report.',
+    description: 'For campuses and portfolios, the platform provides a consistent view across very different buildings.',
     benefits: [
-      'Benchmark across buildings',
-      'Compare efficiency scores',
-      'Portfolio-wide alerts',
-      'Prioritize buildings with highest savings potential',
-      'Standardized reporting',
+      'Benchmark sites on normalized metrics.',
+      'Quickly identify the 5–10 buildings with highest opportunity.',
+      'Provide stakeholders with simple, shareable visuals.',
     ],
     image: 'https://images.unsplash.com/photo-1762264644182-475f505feabb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbmVyZ3klMjBidWlsZGluZyUyMG5pZ2h0fGVufDF8fHx8MTc2NDQ0Mjg1NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
     color: '#a855f7',
@@ -63,11 +57,11 @@ export function SolutionsPage() {
               Solutions
             </div>
             <h1 className="text-5xl lg:text-6xl text-[#f8fafc] mb-6">
-              Designed for Every Facility Type
+              Tailored to the Way Your Facilities Operate
             </h1>
             <p className="text-xl text-[#94a3b8] max-w-3xl mx-auto">
-              Inspired Energy Optimizer adapts to your building's unique profile — whether you operate a 
-              commercial tower, a manufacturing plant, or an entire campus portfolio.
+              Whether you manage a single flagship building or a regional portfolio, Inspired Energy Optimizer
+              adapts to your data and operating reality — not the other way around.
             </p>
           </div>
         </div>
@@ -131,9 +125,12 @@ export function SolutionsPage() {
                     ))}
                   </div>
 
-                  <button className="mt-8 px-8 py-3 rounded-xl border-2 border-[#334155] text-[#f8fafc] hover:border-[#22c55e] hover:glow-soft transition-all">
-                    Learn More
-                  </button>
+                  <a
+                    href="/contact#demo-form"
+                    className="inline-block mt-8 px-8 py-3 rounded-xl border-2 border-[#334155] text-[#f8fafc] hover:border-[#22c55e] hover:glow-soft transition-all"
+                  >
+                    {index === 0 ? 'Discuss a Commercial Pilot' : index === 1 ? 'Discuss an Industrial Pilot' : 'Discuss a Campus Pilot'}
+                  </a>
                 </div>
               </div>
             </div>
@@ -141,7 +138,9 @@ export function SolutionsPage() {
         );
       })}
 
-      {/* Stats Section */}
+      {/* Stats Section - Proven Results Across Industries */}
+      {/* TODO: Uncomment when ready to show proven results/metrics */}
+      {/* 
       <section className="py-20 px-6 bg-[#111827]">
         <div className="container mx-auto">
           <div className="text-center mb-12">
@@ -169,6 +168,7 @@ export function SolutionsPage() {
           </div>
         </div>
       </section>
+      */}
 
       {/* CTA Section */}
       <section className="py-20 px-6 bg-[#0f172a] relative overflow-hidden">
@@ -177,18 +177,25 @@ export function SolutionsPage() {
         <div className="container mx-auto relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl text-[#f8fafc] mb-6">
-              Ready to optimize your facilities?
+              See how this fits your specific portfolio.
             </h2>
             <p className="text-xl text-[#94a3b8] mb-8">
-              Let's discuss your specific challenges and show you how Inspired Energy Optimizer can help.
+              Share your facility type, number of sites, and current tools, and we'll suggest a
+              pilot structure that makes sense for you.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <button className="px-10 py-4 rounded-xl gradient-primary text-white hover:glow-soft transition-all">
-                Book a Demo
-              </button>
-              <button className="px-10 py-4 rounded-xl border-2 border-[#334155] text-[#f8fafc] hover:border-[#22c55e] transition-all">
-                Download Solution Brief
-              </button>
+              <a
+                href="/contact#demo-form"
+                className="px-10 py-4 rounded-xl gradient-primary text-white hover:glow-soft transition-all"
+              >
+                Book a Solutions Call
+              </a>
+              <a
+                href="/contact"
+                className="px-10 py-4 rounded-xl border-2 border-[#334155] text-[#f8fafc] hover:border-[#22c55e] transition-all"
+              >
+                Send Us a Question
+              </a>
             </div>
           </div>
         </div>

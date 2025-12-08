@@ -71,8 +71,8 @@ export function DashboardGallery() {
             See Your Buildings in Command Mode
           </h2>
           <p className="text-xl text-[#94a3b8] max-w-2xl mx-auto">
-            The Inspired Energy Optimizer transforms raw data into a mission-ready control panel. Explore live metrics, 
-            time-series charts, alerts, and an intelligent recommendation feed that helps teams make fast, confident decisions.
+            The interface below shows sample data. In a demo, we walk through how these views adapt to
+            your meters, tariffs, and building types.
           </p>
         </div>
 

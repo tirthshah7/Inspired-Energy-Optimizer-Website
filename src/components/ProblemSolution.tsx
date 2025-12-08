@@ -15,8 +15,8 @@ const problems = [
   },
   {
     icon: DollarSign,
-    title: 'Missed Opportunities',
-    description: 'Teams have charts, but no clear guidance on what should be done right now.',
+    title: 'Missed Savings',
+    description: 'Teams see charts, but don\'t have a prioritized list of actions with expected impact.',
     color: '#ef4444',
   },
 ];
@@ -29,6 +29,9 @@ export function ProblemSolution() {
           <h2 className="text-4xl text-[#f8fafc] mb-4">
             Energy data is everywhere. Insight isn't.
           </h2>
+          <p className="text-xl text-[#94a3b8] max-w-3xl mx-auto">
+            Utility portals, BMS trends, CSV exports — but no clear answer to "what should we do this week?"
+          </p>
         </div>
 
         {/* Problem Cards */}
@@ -63,39 +66,39 @@ export function ProblemSolution() {
               </div>
               <div>
                 <h3 className="text-3xl text-[#f8fafc] mb-4">
-                  The Inspired Energy Optimizer solves this.
+                  Inspired Energy Optimizer turns raw data into a weekly action list.
                 </h3>
                 <p className="text-xl text-[#94a3b8] mb-6">
-                  We centralize all your building and energy data, run advanced AI models on top, and surface live 
-                  recommendations that operators can act on immediately — not next month.
+                  We centralize your building and energy data, run AI models on top, and surface
+                  the 3–10 highest-impact opportunities your team can act on — with clear next steps.
                 </p>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#22c55e] mt-2" />
                     <div>
-                      <div className="text-[#f8fafc] mb-1">Auto-connects to meters, BMS, weather APIs</div>
-                      <div className="text-sm text-[#94a3b8]">No manual data entry required</div>
+                      <div className="text-[#f8fafc] mb-1">Connects to meters, BMS, and weather APIs</div>
+                      <div className="text-sm text-[#94a3b8]">Start with one building or an entire portfolio.</div>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#22c55e] mt-2" />
                     <div>
-                      <div className="text-[#f8fafc] mb-1">AI detects anomalies and forecasts demand</div>
-                      <div className="text-sm text-[#94a3b8]">Prevent issues before they happen</div>
+                      <div className="text-[#f8fafc] mb-1">AI forecasting & anomaly detection</div>
+                      <div className="text-sm text-[#94a3b8]">See tomorrow's peaks and unusual patterns early.</div>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#22c55e] mt-2" />
                     <div>
-                      <div className="text-[#f8fafc] mb-1">Actionable playbooks, not just dashboards</div>
-                      <div className="text-sm text-[#94a3b8]">Know exactly what to do and when</div>
+                      <div className="text-[#f8fafc] mb-1">Actionable playbooks</div>
+                      <div className="text-sm text-[#94a3b8]">Each alert is tied to a recommended change and estimated impact.</div>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#22c55e] mt-2" />
                     <div>
-                      <div className="text-[#f8fafc] mb-1">Portfolio-wide visibility in seconds</div>
-                      <div className="text-sm text-[#94a3b8]">All sites, all metrics, one view</div>
+                      <div className="text-[#f8fafc] mb-1">Portfolio-wide view</div>
+                      <div className="text-sm text-[#94a3b8]">Know which sites to prioritize this quarter.</div>
                     </div>
                   </div>
                 </div>

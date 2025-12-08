@@ -7,10 +7,9 @@ const useCases = [
     title: 'Commercial Buildings',
     description: 'Optimize comfort, reduce costs, and identify operational inefficiencies.',
     benefits: [
-      'Reduce tenant energy complaints',
-      'Optimize HVAC and lighting schedules',
-      'Meet ESG reporting requirements',
-      'Lower operating costs by 15-25%',
+      'Reduce tenant comfort complaints linked to HVAC issues.',
+      'Find scheduling gaps in AHUs, RTUs, and lighting.',
+      'Support ESG and sustainability reporting with clear charts.',
     ],
     image: 'https://images.unsplash.com/photo-1694702740570-0a31ee1525c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBidWlsZGluZ3xlbnwxfHx8fDE3NjQzNzUwNTR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
     color: '#22c55e',
@@ -20,10 +19,9 @@ const useCases = [
     title: 'Industrial & Manufacturing',
     description: 'Spot energy-heavy processes, optimize runtimes, and prevent expensive anomalies.',
     benefits: [
-      'Monitor production line energy',
-      'Detect equipment inefficiencies',
-      'Avoid costly demand charges',
-      'Track sustainability metrics',
+      'Monitor line-level energy intensity over time.',
+      'Catch off-shift equipment that is left running.',
+      'Support demand-management strategies with clear forecasts.',
     ],
     image: 'https://images.unsplash.com/photo-1764114235916-74de69e6851f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwZmFjdG9yeSUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzY0MzkyNjQ1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
     color: '#38bdf8',
@@ -33,10 +31,9 @@ const useCases = [
     title: 'Campuses & Multi-Site Portfolios',
     description: 'Unify data, benchmark buildings, and prioritize where to act first.',
     benefits: [
-      'Unified view across all sites',
-      'Benchmark building performance',
-      'Coordinate portfolio-wide initiatives',
-      'Scale best practices automatically',
+      'Benchmark buildings with normalized metrics.',
+      'Prioritize which sites to tackle each quarter.',
+      'Coordinate initiatives across facility teams.',
     ],
     image: 'https://images.unsplash.com/photo-1762264644182-475f505feabb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbmVyZ3klMjBidWlsZGluZyUyMG5pZ2h0fGVufDF8fHx8MTc2NDQ0Mjg1NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
     color: '#a855f7',
@@ -100,26 +97,6 @@ export function UseCases() {
               </div>
             );
           })}
-        </div>
-
-        {/* Stats Section */}
-        <div className="mt-16 grid md:grid-cols-4 gap-6">
-          <div className="bg-[#1f2937] rounded-xl p-6 border border-[#334155] text-center">
-            <div className="text-3xl text-[#22c55e] mb-2">1,247</div>
-            <div className="text-[#94a3b8]">Buildings Connected</div>
-          </div>
-          <div className="bg-[#1f2937] rounded-xl p-6 border border-[#334155] text-center">
-            <div className="text-3xl text-[#38bdf8] mb-2">$47M</div>
-            <div className="text-[#94a3b8]">Annual Savings Identified</div>
-          </div>
-          <div className="bg-[#1f2937] rounded-xl p-6 border border-[#334155] text-center">
-            <div className="text-3xl text-[#a855f7] mb-2">18.5%</div>
-            <div className="text-[#94a3b8]">Average Energy Reduction</div>
-          </div>
-          <div className="bg-[#1f2937] rounded-xl p-6 border border-[#334155] text-center">
-            <div className="text-3xl text-[#22c55e] mb-2">24k</div>
-            <div className="text-[#94a3b8]">Tons CO₂ Avoided</div>
-          </div>
         </div>
       </div>
     </section>

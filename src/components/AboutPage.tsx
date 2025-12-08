@@ -10,19 +10,19 @@ const values = [
   {
     icon: Lightbulb,
     title: 'Simplicity',
-    description: 'Dashboards should be powerful, not overwhelming.',
+    description: 'Interfaces should feel like a cockpit, not a spreadsheet.',
     color: '#38bdf8',
   },
   {
     icon: Shield,
     title: 'Transparency',
-    description: 'No black-box recommendations.',
+    description: 'Clear assumptions, explainable models, and human-in-the-loop controls.',
     color: '#a855f7',
   },
   {
     icon: Zap,
     title: 'Scalability',
-    description: 'Built for portfolios and enterprises.',
+    description: 'Architecture designed for portfolios, not just individual meters.',
     color: '#22c55e',
   },
   {
@@ -49,6 +49,9 @@ export function AboutPage() {
             <h1 className="text-5xl lg:text-6xl text-[#f8fafc] mb-6">
               Built for the Next Era of Energy Intelligence
             </h1>
+            <p className="text-xl text-[#94a3b8] max-w-3xl mx-auto">
+              Inspired Energy Optimizer is an AI-first energy intelligence platform being built in Windsor, Ontario — designed with real operators, real buildings, and real grid challenges in mind.
+            </p>
           </div>
         </div>
       </section>
@@ -64,9 +67,12 @@ export function AboutPage() {
               <h2 className="text-4xl text-[#f8fafc] mb-6">
                 To make every building run intelligently
               </h2>
-              <p className="text-xl text-[#94a3b8]">
+              <p className="text-xl text-[#94a3b8] mb-4">
                 From high-rises to factories to campuses — we envision a world where buildings run intelligently, 
-                efficiently, and sustainably through advanced AI-driven insights.
+                efficiently, and sustainably through advanced AI-driven insights that are easy for teams to act on.
+              </p>
+              <p className="text-xl text-[#94a3b8]">
+                Inspired Energy Optimizer focuses on turning fragmented data into clear, confident decisions — not more dashboards to stare at.
               </p>
             </div>
             <div className="relative">
@@ -75,19 +81,19 @@ export function AboutPage() {
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center">
                     <div className="text-5xl text-[#22c55e] mb-2">100%</div>
-                    <div className="text-[#94a3b8]">Cloud-based</div>
+                    <div className="text-[#94a3b8]">Cloud-ready architecture</div>
                   </div>
                   <div className="text-center">
                     <div className="text-5xl text-[#38bdf8] mb-2">0</div>
-                    <div className="text-[#94a3b8]">Hardware required</div>
+                    <div className="text-[#94a3b8]">Hardware lock-in required</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-5xl text-[#a855f7] mb-2">15 sec</div>
-                    <div className="text-[#94a3b8]">Data refresh</div>
+                    <div className="text-5xl text-[#a855f7] mb-2">15 sec*</div>
+                    <div className="text-[#94a3b8]">Target data refresh interval</div>
                   </div>
                   <div className="text-center">
                     <div className="text-5xl text-[#22c55e] mb-2">24/7</div>
-                    <div className="text-[#94a3b8]">Monitoring</div>
+                    <div className="text-[#94a3b8]">Monitoring & alerts roadmap</div>
                   </div>
                 </div>
               </div>
@@ -108,8 +114,8 @@ export function AboutPage() {
                 Empower organizations with actionable intelligence
               </h2>
               <p className="text-xl text-[#94a3b8]">
-                To empower organizations with real-time visibility, predictive intelligence, and actionable 
-                recommendations that reduce waste, cut operational costs, and protect the grid.
+                Our mission is to empower operations and sustainability teams with real-time visibility, predictive intelligence, 
+                and action-first recommendations that reduce waste, cut operational costs, and support a more resilient grid.
               </p>
             </div>
 
@@ -126,7 +132,7 @@ export function AboutPage() {
                   <TrendingUp className="w-8 h-8 text-[#38bdf8]" />
                 </div>
                 <h3 className="text-xl text-[#f8fafc] mb-2">Cut Costs</h3>
-                <p className="text-[#94a3b8]">Lower operational expenses with smart optimization</p>
+                <p className="text-[#94a3b8]">Turn data into measurable savings, not more reports.</p>
               </div>
               <div className="frosted-glass rounded-xl p-6 border border-[#334155] text-center">
                 <div className="w-16 h-16 rounded-xl bg-[#a855f7]/20 flex items-center justify-center mx-auto mb-4">
@@ -149,27 +155,27 @@ export function AboutPage() {
             </h2>
             <div className="space-y-6 text-xl text-[#94a3b8]">
               <p>
-                The energy grid is under unprecedented pressure. Buildings waste more energy than ever before. 
-                And operators are expected to manage increasingly complex systems — with outdated tools.
+                The energy grid is under unprecedented pressure. Buildings still waste a significant share of the power they consume, 
+                and operators are expected to manage increasingly complex systems — often with outdated tools and disconnected data.
               </p>
               <p>
-                Inspired Energy Optimizer was born from one question:{' '}
+                Inspired Energy Optimizer started from a simple question:{' '}
                 <span className="text-[#22c55e]">"What if buildings could think ahead?"</span>
               </p>
               <p>
-                We built a platform that uses machine learning, forecasting, and anomaly detection to turn raw 
-                data into live, actionable intelligence.
+                We are building a platform that uses machine learning, forecasting, and anomaly detection to turn raw 
+                time-series data into live, actionable intelligence — focused on what to do next, not just what happened yesterday.
               </p>
               <div className="frosted-glass rounded-xl p-8 border-2 border-[#22c55e]/30">
                 <div className="grid md:grid-cols-3 gap-6 text-center">
                   <div>
-                    <div className="text-[#f8fafc] mb-2">No hardware.</div>
+                    <div className="text-[#f8fafc] mb-2">No proprietary hardware required.</div>
                   </div>
                   <div>
-                    <div className="text-[#f8fafc] mb-2">No complex integrations.</div>
+                    <div className="text-[#f8fafc] mb-2">No heavy IT projects to get started.</div>
                   </div>
                   <div>
-                    <div className="text-[#f8fafc] mb-2">Just smarter operations from Day 1.</div>
+                    <div className="text-[#f8fafc] mb-2">Just smarter operations, starting with your first pilot site.</div>
                   </div>
                 </div>
               </div>
@@ -223,18 +229,25 @@ export function AboutPage() {
               <Users className="w-10 h-10 text-white" />
             </div>
             <h2 className="text-4xl text-[#f8fafc] mb-6">
-              Join us in building the future of energy intelligence
+              Be an early partner in the future of energy intelligence
             </h2>
             <p className="text-xl text-[#94a3b8] mb-8">
-              We're always looking for passionate individuals who want to make an impact on how buildings use energy.
+              We are actively looking for forward-thinking facility and energy teams to co-design the next generation of 
+              AI-driven operations. As an early partner, you get direct input into the roadmap and tailored support for your sites.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <button className="px-10 py-4 rounded-xl gradient-primary text-white hover:glow-soft transition-all">
-                View Open Positions
-              </button>
-              <button className="px-10 py-4 rounded-xl border-2 border-[#334155] text-[#f8fafc] hover:border-[#22c55e] transition-all">
-                Learn Our Story
-              </button>
+              <a
+                href="/contact"
+                className="px-10 py-4 rounded-xl gradient-primary text-white hover:glow-soft transition-all"
+              >
+                Become a Pilot Partner
+              </a>
+              <a
+                href="/contact"
+                className="px-10 py-4 rounded-xl border-2 border-[#334155] text-[#f8fafc] hover:border-[#22c55e] transition-all"
+              >
+                Talk to the Founder
+              </a>
             </div>
           </div>
         </div>

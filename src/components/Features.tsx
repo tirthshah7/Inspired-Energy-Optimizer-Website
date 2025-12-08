@@ -4,25 +4,25 @@ const features = [
   {
     icon: Activity,
     title: 'Real-Time Monitoring',
-    description: 'Live dashboards that track energy use, load patterns, peak demand, and critical systems across your entire portfolio.',
+    description: 'Portfolio, site, and equipment-level views that update as new data flows in.',
     accent: '#22c55e',
   },
   {
     icon: TrendingUp,
     title: 'Smart Forecasting',
-    description: 'AI models predict tomorrow\'s consumption, demand spikes, and cost exposure — letting you plan instead of react.',
+    description: 'Forecast demand and cost exposure using weather, schedules, and historical patterns.',
     accent: '#38bdf8',
   },
   {
     icon: AlertTriangle,
     title: 'Anomaly Detection',
-    description: 'Instant alerts for unusual patterns, off-schedule equipment, or energy-intensive processes.',
+    description: 'Alerts for out-of-schedule runs, unusual base loads, and weekend spikes.',
     accent: '#a855f7',
   },
   {
     icon: BookOpen,
     title: 'Actionable Playbooks',
-    description: 'Not just charts — clear, prioritized actions tied to measurable savings.',
+    description: 'Prioritized actions with implementation notes and expected savings ranges.',
     accent: '#22c55e',
   },
 ];
@@ -35,6 +35,9 @@ export function Features() {
           <h2 className="text-4xl text-[#f8fafc] mb-4">
             Your AI-powered Energy Co-pilot
           </h2>
+          <p className="text-xl text-[#94a3b8] max-w-3xl mx-auto">
+            Built for energy managers, operators, and sustainability teams who need clear, actionable guidance.
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -68,16 +71,16 @@ export function Features() {
         {/* Additional Feature Highlights */}
         <div className="mt-16 grid md:grid-cols-3 gap-6 text-center">
           <div>
-            <div className="text-4xl text-[#22c55e] mb-2">15-min</div>
-            <div className="text-[#94a3b8]">Data refresh interval</div>
+            <div className="text-4xl text-[#22c55e] mb-2">Pilot-ready</div>
+            <div className="text-[#94a3b8]">Ideal for 1–5 initial buildings</div>
           </div>
           <div>
-            <div className="text-4xl text-[#38bdf8] mb-2">99.9%</div>
-            <div className="text-[#94a3b8]">Uptime guarantee</div>
+            <div className="text-4xl text-[#38bdf8] mb-2">Cloud-hosted</div>
+            <div className="text-[#94a3b8]">No on-site hardware</div>
           </div>
           <div>
-            <div className="text-4xl text-[#a855f7] mb-2">24/7</div>
-            <div className="text-[#94a3b8]">Monitoring & alerts</div>
+            <div className="text-4xl text-[#a855f7] mb-2">Portfolio-minded</div>
+            <div className="text-[#94a3b8]">Built to scale as you grow</div>
           </div>
         </div>
       </div>

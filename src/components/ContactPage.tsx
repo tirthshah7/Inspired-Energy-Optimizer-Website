@@ -102,8 +102,8 @@ export function ContactPage() {
               Let's Talk Energy Intelligence
             </h1>
             <p className="text-xl text-[#94a3b8] max-w-3xl mx-auto">
-              Fill out the form and our team will help you understand your energy data, assess your optimization 
-              potential, and explore real use cases for your building type.
+              Share a bit about your buildings and current setup, and we'll help you understand your data, 
+              assess optimization potential, and map out what a pilot with Inspired Energy Optimizer could look like.
             </p>
           </div>
         </div>
@@ -118,7 +118,7 @@ export function ContactPage() {
               <div>
                 <h2 className="text-2xl text-[#f8fafc] mb-6">Get in Touch</h2>
                 <p className="text-[#94a3b8] mb-8">
-                  We respond within 24 hours. No sales pressure — just insights.
+                  We respond within 24 hours. No hard sales pitches — just a clear, honest conversation.
                 </p>
               </div>
 
@@ -147,13 +147,13 @@ export function ContactPage() {
 
               {/* Trust Badges */}
               <div className="frosted-glass rounded-xl p-6 border border-[#334155]">
-                <div className="text-[#94a3b8] text-sm mb-4">What we'll help you with:</div>
+                <div className="text-[#94a3b8] text-sm mb-4">What we can help you with:</div>
                 <div className="space-y-3">
                   {[
-                    'Understand your energy data',
-                    'Assess optimization potential',
-                    'Explore use cases',
-                    'See a tailored platform demo',
+                    'Understanding your current energy data sources',
+                    'Estimating savings and optimization potential',
+                    'Exploring pilot or proof-of-concept options',
+                    'Seeing a walkthrough of the platform using example data',
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-2">
                       <div className="w-1.5 h-1.5 rounded-full bg-[#22c55e]" />
@@ -165,7 +165,7 @@ export function ContactPage() {
             </div>
 
             {/* Contact Form */}
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-2" id="demo-form">
               <div className="frosted-glass rounded-2xl p-8 md:p-12 border border-[#334155] relative">
                 <div className="glow-soft absolute -inset-4 rounded-3xl opacity-10" />
                 
@@ -261,7 +261,7 @@ export function ContactPage() {
                       value={formData.message}
                       onChange={handleChange}
                       className="w-full px-4 py-3 bg-[#0f172a] border border-[#334155] rounded-lg text-[#f8fafc] focus:border-[#22c55e] focus:outline-none transition-all resize-none"
-                      placeholder="Tell us about your energy challenges and goals..."
+                      placeholder="Tell us about your energy challenges, data sources, and what you'd like to achieve..."
                     />
                   </div>
 
@@ -321,11 +321,14 @@ export function ContactPage() {
                 Prefer to talk first?
               </h3>
               <p className="text-[#94a3b8] mb-6">
-                Schedule a quick 15-minute call to discuss your needs before the full demo.
+                Schedule a quick 15-minute intro call to see if a pilot makes sense for your facility.
               </p>
-              <button className="px-8 py-3 rounded-xl border-2 border-[#22c55e] text-[#22c55e] hover:bg-[#22c55e]/10 transition-all">
-                Schedule a Call
-              </button>
+              <a
+                href="/contact"
+                className="inline-block px-8 py-3 rounded-xl border-2 border-[#22c55e] text-[#22c55e] hover:bg-[#22c55e]/10 transition-all"
+              >
+                Request a Call Slot
+              </a>
             </div>
           </div>
         </div>

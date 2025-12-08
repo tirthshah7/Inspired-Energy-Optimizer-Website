@@ -65,23 +65,20 @@ export function ProductPage() {
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block px-6 py-2 rounded-full bg-[#22c55e]/10 border border-[#22c55e]/30 text-[#22c55e] mb-6">
-              Product — Inside the Inspired Energy Optimizer
+              Product · Inside Inspired Energy Optimizer
             </div>
             <h1 className="text-5xl lg:text-6xl text-[#f8fafc] mb-6">
-              Your Entire Energy Operations in One Command Center
+              Your Energy Operations in One Command Center
             </h1>
             <p className="text-xl text-[#94a3b8] mb-8 max-w-3xl mx-auto">
-              Inspired Energy Optimizer transforms fragmented building data into a single, intelligent cockpit. 
-              Every dashboard, chart, and recommendation is designed to help operators make faster, more informed 
-              decisions — without complex tools or hardware dependencies.
+              Go beyond static reports. Inspired Energy Optimizer gives your team a single place to
+              monitor buildings, spot anomalies, and act on the biggest opportunities each week.
             </p>
             <a 
-              href="https://youtu.be/V71PE_jFGdU?si=cZBEBzkUNpRjG8O4"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/contact#demo-form"
               className="inline-block px-8 py-4 rounded-xl gradient-primary text-white hover:glow-soft transition-all"
             >
-              Explore Live Demo
+              See the Product in a Live Demo
             </a>
           </div>
         </div>
@@ -93,20 +90,19 @@ export function ProductPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl text-[#f8fafc] mb-6">
-                Live visibility you've never had before.
+                Live visibility you can actually use in meetings.
               </h2>
               <p className="text-xl text-[#94a3b8] mb-6">
-                See consumption, demand, load profiles, and equipment behavior second-by-second. 
-                Across every building. Across your portfolio. From the main dashboard or detailed drilldowns.
+                Move from screenshots and copied charts to a live view you can pull up in
+                weekly operations or sustainability check-ins.
               </p>
               <div className="space-y-4">
                 {[
-                  'Portfolio-wide dashboards',
-                  'Live demand tracking',
-                  'Equipment-level visibility (if BMS integrated)',
-                  'Energy cost estimation in real time',
-                  'Multi-site comparison',
-                  'Automated updates every 15 seconds',
+                  'Portfolio dashboard with key KPIs',
+                  'Site-level trends and drill-downs',
+                  'Equipment views when BMS data is available',
+                  'Estimated cost overlays on load profiles',
+                  'Multi-site comparison views',
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#38bdf8]" />
@@ -114,6 +110,9 @@ export function ProductPage() {
                   </div>
                 ))}
               </div>
+              <p className="text-[#94a3b8] mt-6 italic">
+                During a demo, we walk through these views using sample data or a sanitized data set you provide.
+              </p>
             </div>
 
             {/* Dashboard Mockup */}
@@ -129,30 +128,17 @@ export function ProductPage() {
                 </div>
                 
                 {/* KPI Tiles */}
-                <div className="grid grid-cols-3 gap-4">
-                  <div className="bg-[#0f172a] rounded-lg p-4 border border-[#334155]">
-                    <div className="text-[#94a3b8] text-sm mb-1">Total kWh</div>
-                    <div className="text-2xl text-[#f8fafc]">12,847</div>
-                    <div className="text-[#22c55e] text-sm mt-1">↓ 12%</div>
-                  </div>
-                  <div className="bg-[#0f172a] rounded-lg p-4 border border-[#334155]">
-                    <div className="text-[#94a3b8] text-sm mb-1">Cost/Hour</div>
-                    <div className="text-2xl text-[#f8fafc]">$847</div>
-                    <div className="text-[#22c55e] text-sm mt-1">↓ 8%</div>
-                  </div>
-                  <div className="bg-[#0f172a] rounded-lg p-4 border border-[#334155]">
-                    <div className="text-[#94a3b8] text-sm mb-1">Buildings</div>
-                    <div className="text-2xl text-[#f8fafc]">24</div>
-                    <div className="text-[#38bdf8] text-sm mt-1">Active</div>
-                  </div>
+                <div className="space-y-4 mb-4">
+                  <div className="text-[#94a3b8] text-sm">Load, cost, and open opportunities at a glance</div>
+                  <div className="text-[#94a3b8] text-sm">Highlight buildings that require attention this week</div>
                 </div>
 
                 {/* Buildings Status */}
                 <div className="space-y-2">
                   {[
-                    { name: 'Building A', status: 'Optimal', color: '#22c55e' },
-                    { name: 'Building B', status: 'Warning', color: '#f59e0b' },
-                    { name: 'Building C', status: 'Optimal', color: '#22c55e' },
+                    { name: 'Sample Building A', status: 'Stable', color: '#22c55e' },
+                    { name: 'Sample Building B', status: 'Watch', color: '#f59e0b' },
+                    { name: 'Sample Building C', status: 'Optimize', color: '#a855f7' },
                   ].map((building, i) => (
                     <div key={i} className="flex items-center justify-between bg-[#0f172a] rounded-lg p-3 border border-[#334155]">
                       <div className="flex items-center gap-2">
@@ -230,19 +216,18 @@ export function ProductPage() {
 
             <div className="order-1 lg:order-2">
               <h2 className="text-4xl text-[#f8fafc] mb-6">
-                Predict tomorrow, plan today.
+                Know tomorrow's peaks before they hit.
               </h2>
               <p className="text-xl text-[#94a3b8] mb-6">
-                Our ML models forecast consumption, demand spikes, and potential cost exposures based on: 
-                weather, building schedules, historical trends, and occupancy behaviors.
+                Forecasting models combine weather, calendar schedules, and historical usage to highlight
+                expected peaks and exposure windows.
               </p>
               <div className="space-y-4">
                 {[
-                  'AI forecasting models',
-                  'Peak demand prediction',
-                  'Cost exposure modeling',
-                  '"What-if" scenario analysis',
-                  'Dynamic weather impact modeling',
+                  'Daily and weekly demand forecasts',
+                  '"At risk" windows for cost or demand charges',
+                  'Scenario views (e.g., schedule changes, setpoint tweaks)',
+                  'Portfolio-wide view of upcoming peaks',
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#38bdf8]" />
@@ -261,19 +246,17 @@ export function ProductPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl text-[#f8fafc] mb-6">
-                Find issues before they become expensive.
+                Catch issues before they roll into bills.
               </h2>
               <p className="text-xl text-[#94a3b8] mb-6">
-                Inspired Energy Optimizer automatically detects unusual consumption patterns — equipment left on, 
-                inefficient cycles, weekend anomalies, unexpected spikes.
+                Instead of discovering problems through invoices, anomaly detection flags unusual behavior closer to real time.
               </p>
               <div className="space-y-4">
                 {[
-                  'Real-time anomaly alerts',
-                  'Weekend/holiday misuse detection',
-                  'Seasonal deviation detection',
-                  'Cross-building anomaly comparison',
-                  'Root-cause hints',
+                  'Weekend and holiday spikes',
+                  'Equipment running outside schedule',
+                  'Base-load drift compared to baseline',
+                  'Cross-site pattern comparison',
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#ef4444]" />
@@ -291,7 +274,7 @@ export function ProductPage() {
                   <h3 className="text-[#f8fafc]">Anomaly Detected</h3>
                   <div className="px-3 py-1 rounded-full bg-[#ef4444]/20 text-[#ef4444] text-sm flex items-center gap-2">
                     <AlertTriangle className="w-4 h-4" />
-                    Alert
+                    Example: After-hours spike
                   </div>
                 </div>
                 <ResponsiveContainer width="100%" height={250}>
@@ -323,7 +306,7 @@ export function ProductPage() {
                 </ResponsiveContainer>
                 <div className="mt-4 bg-[#ef4444]/10 border border-[#ef4444]/30 rounded-lg p-4">
                   <p className="text-[#ef4444] text-sm">
-                    Unusual spike detected at 12am — 185% above baseline. Possible equipment left running.
+                    Usage significantly above normal for this time. Possible equipment left on.
                   </p>
                 </div>
               </div>
@@ -341,71 +324,60 @@ export function ProductPage() {
               <div className="glow-primary absolute -inset-4 rounded-3xl opacity-20" />
               <div className="frosted-glass rounded-2xl p-6 space-y-4 relative border border-[#334155]">
                 <h3 className="text-[#f8fafc] mb-4">Priority Recommendations</h3>
-                {recommendations.map((rec, index) => {
-                  const Icon = rec.icon;
-                  return (
-                    <div
-                      key={index}
-                      className="bg-[#0f172a] rounded-xl p-4 border border-[#334155] hover:border-[#22c55e] transition-all"
-                    >
-                      <div className="flex items-start gap-3">
-                        <div
-                          className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
-                          style={{ backgroundColor: `${rec.color}20` }}
-                        >
-                          <Icon className="w-5 h-5" style={{ color: rec.color }} />
-                        </div>
-                        <div className="flex-1">
-                          <div className="flex items-start justify-between gap-2 mb-2">
-                            <h4 className="text-[#f8fafc]">{rec.title}</h4>
-                            <div
-                              className="px-2 py-1 rounded text-xs whitespace-nowrap"
-                              style={{ backgroundColor: `${rec.color}20`, color: rec.color }}
-                            >
-                              {rec.impact} Impact
-                            </div>
-                          </div>
-                          <div className="flex items-center gap-3 text-sm">
-                            <span className="text-[#22c55e]">Savings: {rec.savings}</span>
-                          </div>
-                        </div>
+                {[
+                  {
+                    title: 'Adjust chiller schedule by 1 hour on weekdays',
+                    savings: 'Shows estimated monthly impact based on recent data.',
+                    impact: 'High',
+                    color: '#22c55e',
+                  },
+                  {
+                    title: 'Investigate AHU-2 after 8 pm',
+                    savings: 'Flagged as running outside normal occupancy hours.',
+                    impact: 'Medium',
+                    color: '#f59e0b',
+                  },
+                ].map((rec, index) => (
+                  <div
+                    key={index}
+                    className="bg-[#0f172a] rounded-xl p-4 border border-[#334155] hover:border-[#22c55e] transition-all"
+                  >
+                    <div className="flex items-start justify-between gap-2 mb-2">
+                      <h4 className="text-[#f8fafc]">{rec.title}</h4>
+                      <div
+                        className="px-2 py-1 rounded text-xs whitespace-nowrap"
+                        style={{ backgroundColor: `${rec.color}20`, color: rec.color }}
+                      >
+                        {rec.impact} Impact
                       </div>
                     </div>
-                  );
-                })}
+                    <div className="text-sm text-[#94a3b8]">
+                      {rec.savings}
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
 
             <div className="order-1 lg:order-2">
               <h2 className="text-4xl text-[#f8fafc] mb-6">
-                We don't just show data. We tell you what to do.
+                Turn alerts into an action list your team can track.
               </h2>
               <p className="text-xl text-[#94a3b8] mb-6">
-                Every insight is translated into clear, impact-first actions — prioritized by savings potential.
+                Each recommendation can be tagged as "planned", "in progress", or "completed", with notes added
+                by your operations team.
               </p>
               <div className="space-y-4 mb-8">
                 {[
-                  'Pre-built optimization playbooks',
-                  'Priority-based recommendations',
-                  'Savings quantification',
-                  'Alerts with contextual explanations',
-                  'Before/after impact measurement',
+                  'Prioritized list by impact and ease of implementation',
+                  'Tags and ownership for each action',
+                  'Simple before/after view to show improvement',
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#22c55e]" />
                     <span className="text-[#f8fafc]">{item}</span>
                   </div>
                 ))}
-              </div>
-              
-              {/* Savings Gauge */}
-              <div className="bg-[#1f2937] rounded-xl p-6 border border-[#334155]">
-                <div className="text-[#94a3b8] text-sm mb-2">Total Monthly Savings Potential</div>
-                <div className="text-4xl text-[#22c55e] mb-4">$1,350</div>
-                <div className="w-full bg-[#0f172a] rounded-full h-3 overflow-hidden">
-                  <div className="h-full bg-gradient-to-r from-[#22c55e] to-[#38bdf8] rounded-full" style={{ width: '68%' }} />
-                </div>
-                <div className="text-sm text-[#94a3b8] mt-2">68% of recommendations implemented</div>
               </div>
             </div>
           </div>
@@ -417,14 +389,18 @@ export function ProductPage() {
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl text-[#f8fafc] mb-6">
-              Ready to see it in action?
+              Want to see how this would look for your buildings?
             </h2>
             <p className="text-xl text-[#94a3b8] mb-8">
-              Schedule a personalized demo and see how Inspired Energy Optimizer can transform your energy operations.
+              In a product session, we'll walk you through the UI and discuss how it maps to your portfolio,
+              data sources, and energy goals.
             </p>
-            <button className="px-10 py-4 rounded-xl gradient-primary text-white hover:glow-soft transition-all">
-              Book Your Demo
-            </button>
+            <a
+              href="/contact#demo-form"
+              className="inline-block px-10 py-4 rounded-xl gradient-primary text-white hover:glow-soft transition-all"
+            >
+              Book a Product Demo
+            </a>
           </div>
         </div>
       </section>

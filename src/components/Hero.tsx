@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Play, Activity } from 'lucide-react';
+import { Play, Activity, Clock } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import {
   LineChart,
   Line,
@@ -52,21 +53,43 @@ export function Hero() {
           {/* Left Side */}
           <div className="space-y-8">
             <div className="space-y-6">
+              <div className="inline-block px-6 py-2 rounded-full bg-[#22c55e]/10 border border-[#22c55e]/30 text-[#22c55e] mb-4">
+                For Commercial, Industrial & Campus Facilities
+              </div>
               <h1 className="text-5xl lg:text-6xl text-[#f8fafc] tracking-tight">
                 AI Energy Intelligence for Your Entire Portfolio
               </h1>
               <p className="text-xl text-[#94a3b8] max-w-xl">
-                Inspired Energy Optimizer unifies your real-time energy and building data into one intelligent platform. 
-                Detect waste instantly, forecast demand with precision, and take clear, data-backed actions that reduce 
-                operational costs and protect the grid.
+                Inspired Energy Optimizer connects to your meters and building systems to surface
+                real, actionable opportunities to cut energy waste and operating costs — without
+                installing new hardware.
               </p>
+              
+              {/* Value Points */}
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#22c55e] mt-2 flex-shrink-0" />
+                  <span className="text-[#f8fafc]">Portfolio-wide visibility in a single control panel</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#22c55e] mt-2 flex-shrink-0" />
+                  <span className="text-[#f8fafc]">AI-driven forecasting and anomaly detection</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#22c55e] mt-2 flex-shrink-0" />
+                  <span className="text-[#f8fafc]">Clear playbooks with estimated savings for each action</span>
+                </div>
+              </div>
             </div>
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4">
-              <button className="px-8 py-4 rounded-xl gradient-primary text-white hover:glow-soft transition-all">
-                Book a Demo
-              </button>
+              <Link
+                to="/contact#demo-form"
+                className="px-8 py-4 rounded-xl gradient-primary text-white hover:glow-soft transition-all"
+              >
+                Book a 30-Minute Demo
+              </Link>
               <a
                 href="https://youtu.be/V71PE_jFGdU?si=cZBEBzkUNpRjG8O4"
                 target="_blank"
@@ -74,14 +97,14 @@ export function Hero() {
                 className="px-8 py-4 rounded-xl border border-[#334155] text-[#f8fafc] hover:border-[#22c55e] transition-all flex items-center gap-2"
               >
                 <Play className="w-4 h-4" />
-                Watch Overview
+                Watch 3-Minute Overview
               </a>
             </div>
 
-            {/* Live Status */}
+            {/* Mini Trust */}
             <div className="flex items-center gap-2 text-[#94a3b8]">
-              <div className="w-2 h-2 rounded-full bg-[#22c55e] animate-pulse-slow" />
-              <span>Live data — updated every 15 seconds</span>
+              <Clock className="w-4 h-4" />
+              <span>We respond to every demo request within 24 hours.</span>
             </div>
           </div>
 
@@ -92,30 +115,30 @@ export function Hero() {
               {/* KPI Tiles */}
               <div className="grid grid-cols-3 gap-4">
                 <div className="bg-[#111827] rounded-lg p-4 border border-[#334155] hover:border-[#22c55e] transition-all duration-300 hover:scale-105">
-                  <div className="text-[#94a3b8] text-sm mb-1">Current kWh</div>
+                  <div className="text-[#94a3b8] text-sm mb-1">Portfolio Load (kW)</div>
                   <div className={`text-2xl text-[#f8fafc] transition-all duration-1000 ${animateKPIs ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>
                     2,847
                   </div>
                   <div className={`text-[#22c55e] text-sm mt-1 transition-all duration-1000 delay-100 ${animateKPIs ? 'opacity-100' : 'opacity-0'}`}>
-                    ↓ 12%
+                    ↓ vs. prior week
                   </div>
                 </div>
                 <div className="bg-[#111827] rounded-lg p-4 border border-[#334155] hover:border-[#38bdf8] transition-all duration-300 hover:scale-105">
-                  <div className="text-[#94a3b8] text-sm mb-1">Today's Cost</div>
+                  <div className="text-[#94a3b8] text-sm mb-1">Estimated Cost / Day</div>
                   <div className={`text-2xl text-[#f8fafc] transition-all duration-1000 delay-200 ${animateKPIs ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>
                     $3,421
                   </div>
                   <div className={`text-[#22c55e] text-sm mt-1 transition-all duration-1000 delay-300 ${animateKPIs ? 'opacity-100' : 'opacity-0'}`}>
-                    ↓ 8%
+                    Potential savings highlighted
                   </div>
                 </div>
                 <div className="bg-[#111827] rounded-lg p-4 border border-[#334155] hover:border-[#a855f7] transition-all duration-300 hover:scale-105">
-                  <div className="text-[#94a3b8] text-sm mb-1">CO₂ Avoided</div>
+                  <div className="text-[#94a3b8] text-sm mb-1">Opportunities Open</div>
                   <div className={`text-2xl text-[#f8fafc] transition-all duration-1000 delay-400 ${animateKPIs ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>
-                    1.2t
+                    9
                   </div>
-                  <div className={`text-[#22c55e] text-sm mt-1 transition-all duration-1000 delay-500 ${animateKPIs ? 'opacity-100' : 'opacity-0'}`}>
-                    ↑ 15%
+                  <div className={`text-[#a855f7] text-sm mt-1 transition-all duration-1000 delay-500 ${animateKPIs ? 'opacity-100' : 'opacity-0'}`}>
+                    Ranked by impact
                   </div>
                 </div>
               </div>
@@ -123,7 +146,7 @@ export function Hero() {
               {/* Chart */}
               <div className="bg-[#111827] rounded-lg p-4 border border-[#334155]">
                 <div className="flex items-center justify-between mb-4">
-                  <div className="text-[#f8fafc]">Energy Usage - Today</div>
+                  <div className="text-[#f8fafc]">Load Profile — Today (Sample)</div>
                   <div className="flex items-center gap-2">
                     <Activity className="w-4 h-4 text-[#22c55e] animate-pulse-slow" />
                     <span className="text-[#22c55e] text-sm">Live</span>
@@ -187,13 +210,13 @@ export function Hero() {
               <div className="bg-[#111827] rounded-lg p-4 border border-[#334155] space-y-3">
                 <div className="text-[#f8fafc] flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-[#22c55e]" />
-                  Recommended Actions
+                  Example Recommendations
                 </div>
                 <div className="space-y-2">
                   {[
-                    'Reduce HVAC setpoint by 2°F during off-peak',
-                    'Schedule EV charging to off-peak hours',
-                    'Investigate anomaly in Building 3 baseline',
+                    'Shift EV charging from 4–6 pm to 10 pm–12 am.',
+                    'Reduce AHU-2 supply temp by 1°C during low occupancy.',
+                    'Investigate weekend base load in Building 3.',
                   ].map((action, i) => (
                     <div key={i} className="text-sm text-[#94a3b8] pl-4 border-l-2 border-[#22c55e]">
                       {action}

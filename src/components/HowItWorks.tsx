@@ -1,28 +1,29 @@
-import { Plug, Brain, Lightbulb, TrendingUp } from 'lucide-react';
+import { Calendar, FolderInput, Brain, TrendingUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const steps = [
   {
-    icon: Plug,
-    title: 'Connect',
-    description: 'Securely link meters, BMS systems, and operational data via API — no hardware installation required.',
+    icon: Calendar,
+    title: 'Book a Demo',
+    description: 'Use the form to schedule a 30-minute walkthrough with the founder.',
     color: '#22c55e',
   },
   {
-    icon: Brain,
-    title: 'Learn',
-    description: 'Our AI models build baselines, detect patterns, and understand your building\'s behavior.',
+    icon: FolderInput,
+    title: 'Share Sample Data',
+    description: 'We review 1–3 months of interval data and building info (under NDA if required).',
     color: '#38bdf8',
   },
   {
-    icon: Lightbulb,
-    title: 'Recommend',
-    description: 'The system highlights high-impact opportunities with estimated savings and clear next steps.',
+    icon: Brain,
+    title: 'Configure Your Pilot',
+    description: 'We set up dashboards, alerts, and playbooks tailored to your sites.',
     color: '#a855f7',
   },
   {
     icon: TrendingUp,
-    title: 'Optimize & Iterate',
-    description: 'Track results, compare before/after curves, and continuously improve.',
+    title: 'Run a 6–12 Week Pilot',
+    description: 'Track actions taken, estimated savings ranges, and next-phase roadmap.',
     color: '#22c55e',
   },
 ];
@@ -36,9 +37,8 @@ export function HowItWorks() {
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl text-[#f8fafc] mb-4">
-            How It Works
+            How a Pilot with Inspired Energy Optimizer Works
           </h2>
-
         </div>
 
         {/* Desktop: Horizontal Flow */}
@@ -125,11 +125,14 @@ export function HowItWorks() {
         <div className="mt-16 text-center">
           <div className="frosted-glass rounded-2xl p-8 inline-block border border-[#334155]">
             <p className="text-[#94a3b8] mb-4">
-              Setup takes less than 30 minutes. See results in 24 hours.
+              Interested in a pilot for 1–5 buildings in Ontario or nearby regions?
             </p>
-            <button className="px-8 py-3 rounded-lg gradient-primary text-white hover:glow-soft transition-all">
-              Start Free Trial
-            </button>
+            <Link
+              to="/contact#demo-form"
+              className="inline-block px-8 py-3 rounded-lg gradient-primary text-white hover:glow-soft transition-all"
+            >
+              Request a Pilot Discussion
+            </Link>
           </div>
         </div>
       </div>
