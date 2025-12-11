@@ -45,7 +45,10 @@ export function Header() {
             <div className="gradient-primary p-2.5 rounded-xl glow-soft">
               <Zap className="w-5 h-5 text-white" />
             </div>
-            <span className="text-[#f8fafc] tracking-tight">Inspired Energy Optimizer</span>
+            <div className="flex flex-col">
+              <span className="text-[#f8fafc] tracking-tight font-semibold text-lg">Inergy</span>
+              <span className="text-[#94a3b8] text-xs tracking-tight">Inspired Energy Optimizer</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

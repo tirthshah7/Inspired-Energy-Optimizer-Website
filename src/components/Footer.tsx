@@ -11,7 +11,10 @@ export function Footer() {
                 <div className="gradient-primary p-2 rounded-lg glow-soft">
                   <Zap className="w-4 h-4 text-white" />
                 </div>
-                <span className="text-[#f8fafc] font-semibold">Inspired Energy Optimizer</span>
+                <div className="flex flex-col">
+                  <span className="text-[#f8fafc] font-semibold text-lg">Inergy</span>
+                  <span className="text-[#94a3b8] text-xs">Inspired Energy Optimizer</span>
+                </div>
               </div>
               <p className="text-[#94a3b8] text-sm mb-6 leading-relaxed">
                 AI Energy Intelligence for Buildings and Industrial Sites
@@ -30,9 +33,12 @@ export function Footer() {
             </div>
 
             {/* RIGHT: Tagline - BIG with Glow */}
-            <div className="flex items-center justify-center px-4 md:px-8 py-4">
-              <p className="text-[#f8fafc] text-center font-bold italic text-xl md:text-2xl lg:text-3xl xl:text-4xl glow-pulse leading-relaxed max-w-2xl">
-                &ldquo;Crafted with Inspiration, guided by Curiosity, grounded in Sustainability.&rdquo;
+            <div className="flex flex-col items-center justify-center px-4 md:px-8 py-4">
+              <p className="text-[#f8fafc] text-center font-bold text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-relaxed max-w-2xl mb-3">
+                &ldquo;<span className="glow-in-green">In</span>telligent, <span className="glow-in-blue">In</span>sightful and <span className="glow-in-purple">In</span>spired&rdquo;
+              </p>
+              <p className="text-[#94a3b8] text-center font-bold italic text-base md:text-lg lg:text-xl leading-relaxed max-w-2xl">
+                Dedicated to a Smarter, More Sustainable Energy Future
               </p>
             </div>
           </div>
@@ -63,7 +69,7 @@ export function Footer() {
 
         {/* Bottom */}
         <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-[#94a3b8]">
-          <p>&copy; 2025 Inspired Energy Optimizer. All rights reserved.</p>
+          <p>&copy; 2025 Inergy. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="/privacy-policy" className="hover:text-[#22c55e] transition-colors">Privacy Policy</a>
             <a href="/terms-of-service" className="hover:text-[#22c55e] transition-colors">Terms of Service</a>

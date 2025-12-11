@@ -1,7 +1,7 @@
 
-# Inspired Energy Optimizer Website
+# Inergy Website
 
-This is the marketing website for Inspired Energy Optimizer, an AI-powered energy intelligence platform for buildings and industrial sites. The original design is available at https://www.figma.com/design/NVwXs9tyeFpaeDL6fUprUg/Energy-Command-Center-Website.
+This is the marketing website for Inergy (Inspired Energy Optimizer), an AI-powered energy intelligence platform for buildings and industrial sites. The original design is available at https://www.figma.com/design/NVwXs9tyeFpaeDL6fUprUg/Energy-Command-Center-Website.
 
   ## Running the code
 
