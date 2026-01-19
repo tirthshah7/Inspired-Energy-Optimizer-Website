@@ -66,7 +66,7 @@ export function ProblemSolution() {
               </div>
               <div>
                 <h3 className="text-3xl text-[#f8fafc] mb-4">
-                  Inspired Energy Optimizer turns raw data into a weekly action list.
+                  Enerwyse turns raw data into a weekly action list.
                 </h3>
                 <p className="text-xl text-[#94a3b8] mb-6">
                   We centralize your building and energy data, run AI models on top, and surface

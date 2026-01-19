@@ -37,7 +37,7 @@ export function HowItWorks() {
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl text-[#f8fafc] mb-4">
-            How a Pilot with Inspired Energy Optimizer Works
+            How a Pilot with Enerwyse Works
           </h2>
         </div>
 

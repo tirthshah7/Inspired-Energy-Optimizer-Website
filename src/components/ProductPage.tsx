@@ -65,13 +65,13 @@ export function ProductPage() {
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block px-6 py-2 rounded-full bg-[#22c55e]/10 border border-[#22c55e]/30 text-[#22c55e] mb-6">
-              Product · Inside Inspired Energy Optimizer
+              Product · Inside Enerwyse
             </div>
             <h1 className="text-5xl lg:text-6xl text-[#f8fafc] mb-6">
               Your Energy Operations in One Command Center
             </h1>
             <p className="text-xl text-[#94a3b8] mb-8 max-w-3xl mx-auto">
-              Go beyond static reports. Inspired Energy Optimizer gives your team a single place to
+              Go beyond static reports. Enerwyse gives your team a single place to
               monitor buildings, spot anomalies, and act on the biggest opportunities each week.
             </p>
             <a 

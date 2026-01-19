@@ -31,7 +31,7 @@ export function PrivacyPolicyPage() {
             {/* Introduction */}
             <div className="frosted-glass rounded-2xl p-8 mb-12 border border-[#334155]">
               <p className="text-[#f8fafc] text-lg leading-relaxed mb-4">
-                Inspired Energy Optimizer ("we", "our", "the Platform") is an energy management and optimization platform that enables customers to access, analyze, and optimize their electricity consumption using Green Button Connect My Data (CMD) functionality.
+                Enerwyse ("we", "our", "the Platform") is an energy management and optimization platform that enables customers to access, analyze, and optimize their electricity consumption using Green Button Connect My Data (CMD) functionality.
               </p>
               <p className="text-[#f8fafc] text-lg leading-relaxed">
                 We are committed to protecting your privacy and ensuring transparent, secure handling of your personal and energy-related information. This Privacy Policy explains how we collect, use, store, and protect your data.
@@ -386,7 +386,10 @@ export function PrivacyPolicyPage() {
                 <div className="space-y-4">
                   <div>
                     <p className="text-[#f8fafc] font-semibold text-lg mb-2">Privacy Officer</p>
-                    <p className="text-[#f8fafc] text-lg mb-2">Inspired Energy Optimizer</p>
+                    <p className="text-[#f8fafc] text-lg mb-2">Enerwyse</p>
+                    <p className="text-[#94a3b8] text-sm mb-2">
+                      Operating under 1001435754 ONTARIO INC.
+                    </p>
                     <a 
                       href="mailto:theinspiredtechlabs@gmail.com" 
                       className="text-[#22c55e] hover:text-[#38bdf8] transition-colors text-lg"

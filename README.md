@@ -1,7 +1,7 @@
 
-# Inergy Website
+# Enerwyse Website
 
-This is the marketing website for Inergy (Inspired Energy Optimizer), an AI-powered energy intelligence platform for buildings and industrial sites. The original design is available at https://www.figma.com/design/NVwXs9tyeFpaeDL6fUprUg/Energy-Command-Center-Website.
+This is the marketing website for Enerwyse (Intelligent Energy), an AI-powered energy intelligence platform for buildings and industrial sites. Visit us at [enerwise.com](https://enerwise.com) or [enerwise.ca](https://enerwise.ca). The original design is available at https://www.figma.com/design/NVwXs9tyeFpaeDL6fUprUg/Energy-Command-Center-Website.
 
   ## Running the code
 

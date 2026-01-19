@@ -50,7 +50,7 @@ export function AboutPage() {
               Built for the Next Era of Energy Intelligence
             </h1>
             <p className="text-xl text-[#94a3b8] max-w-3xl mx-auto">
-              Inspired Energy Optimizer is an AI-first energy intelligence platform being built in Windsor, Ontario — designed with real operators, real buildings, and real grid challenges in mind.
+              Enerwyse is an AI-first energy intelligence platform being built in Windsor, Ontario — designed with real operators, real buildings, and real grid challenges in mind.
             </p>
           </div>
         </div>
@@ -72,7 +72,7 @@ export function AboutPage() {
                 efficiently, and sustainably through advanced AI-driven insights that are easy for teams to act on.
               </p>
               <p className="text-xl text-[#94a3b8]">
-                Inspired Energy Optimizer focuses on turning fragmented data into clear, confident decisions — not more dashboards to stare at.
+                Enerwyse focuses on turning fragmented data into clear, confident decisions — not more dashboards to stare at.
               </p>
             </div>
             <div className="relative">
@@ -151,7 +151,7 @@ export function AboutPage() {
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl text-[#f8fafc] mb-6 text-center">
-              Why We Built Inspired Energy Optimizer
+              Why We Built Enerwyse
             </h2>
             <div className="space-y-6 text-xl text-[#94a3b8]">
               <p>
@@ -159,7 +159,7 @@ export function AboutPage() {
                 and operators are expected to manage increasingly complex systems — often with outdated tools and disconnected data.
               </p>
               <p>
-                Inspired Energy Optimizer started from a simple question:{' '}
+                Enerwyse started from a simple question:{' '}
                 <span className="text-[#22c55e]">"What if buildings could think ahead?"</span>
               </p>
               <p>

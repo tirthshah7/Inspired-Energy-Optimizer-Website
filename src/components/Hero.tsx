@@ -60,9 +60,12 @@ export function Hero() {
                 AI Energy Intelligence for Your Entire Portfolio
               </h1>
               <p className="text-xl text-[#94a3b8] max-w-xl">
-                Inspired Energy Optimizer connects to your meters and building systems to surface
+                Enerwyse connects to your meters and building systems to surface
                 real, actionable opportunities to cut energy waste and operating costs — without
                 installing new hardware.
+              </p>
+              <p className="text-lg text-[#22c55e] font-semibold max-w-xl">
+                Smarter Energy. Cleaner World.
               </p>
               
               {/* Value Points */}
@@ -97,7 +100,7 @@ export function Hero() {
                 className="px-8 py-4 rounded-xl border border-[#334155] text-[#f8fafc] hover:border-[#22c55e] transition-all flex items-center gap-2"
               >
                 <Play className="w-4 h-4" />
-                Watch 3-Minute Overview
+                Watch a short Video
               </a>
             </div>
 

@@ -54,7 +54,7 @@ export function ContactPage() {
         },
         body: JSON.stringify({
           ...formData,
-          _subject: 'New Demo Request - Inspired Energy Optimizer',
+          _subject: 'New Demo Request - Enerwyse',
         }),
       });
 
@@ -103,7 +103,7 @@ export function ContactPage() {
             </h1>
             <p className="text-xl text-[#94a3b8] max-w-3xl mx-auto">
               Share a bit about your buildings and current setup, and we'll help you understand your data, 
-              assess optimization potential, and map out what a pilot with Inspired Energy Optimizer could look like.
+              assess optimization potential, and map out what a pilot with Enerwyse could look like.
             </p>
           </div>
         </div>

@@ -60,7 +60,7 @@ export function SolutionsPage() {
               Tailored to the Way Your Facilities Operate
             </h1>
             <p className="text-xl text-[#94a3b8] max-w-3xl mx-auto">
-              Whether you manage a single flagship building or a regional portfolio, Inspired Energy Optimizer
+              Whether you manage a single flagship building or a regional portfolio, Enerwyse
               adapts to your data and operating reality — not the other way around.
             </p>
           </div>

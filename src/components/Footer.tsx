@@ -1,19 +1,19 @@
-import { Zap, Linkedin, Twitter, Github } from 'lucide-react';
+import { Zap, Linkedin, Github, X, Instagram, MessageCircle } from 'lucide-react';
 
 export function Footer() {
   return (
       <footer className="py-12 px-6 bg-[#0f172a] border-t border-[#334155]">
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-8 items-start">
-            {/* LEFT: Brand - Inspired Energy Optimizer */}
+            {/* LEFT: Brand - Enerwyse */}
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <div className="gradient-primary p-2 rounded-lg glow-soft">
                   <Zap className="w-4 h-4 text-white" />
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-[#f8fafc] font-semibold text-lg">Inergy</span>
-                  <span className="text-[#94a3b8] text-xs">Inspired Energy Optimizer</span>
+                  <span className="text-[#f8fafc] font-semibold text-lg">Enerwyse</span>
+                  <span className="text-[#94a3b8] text-xs">Intelligent Energy</span>
                 </div>
               </div>
               <p className="text-[#94a3b8] text-sm mb-6 leading-relaxed">
@@ -23,8 +23,14 @@ export function Footer() {
                 <a href="#" className="text-[#94a3b8] hover:text-[#22c55e] transition-colors" aria-label="LinkedIn">
                   <Linkedin className="w-5 h-5" />
                 </a>
-                <a href="#" className="text-[#94a3b8] hover:text-[#22c55e] transition-colors" aria-label="Twitter">
-                  <Twitter className="w-5 h-5" />
+                <a href="#" className="text-[#94a3b8] hover:text-[#22c55e] transition-colors" aria-label="X (formerly Twitter)">
+                  <X className="w-5 h-5" />
+                </a>
+                <a href="#" className="text-[#94a3b8] hover:text-[#22c55e] transition-colors" aria-label="Reddit">
+                  <MessageCircle className="w-5 h-5" />
+                </a>
+                <a href="#" className="text-[#94a3b8] hover:text-[#22c55e] transition-colors" aria-label="Instagram">
+                  <Instagram className="w-5 h-5" />
                 </a>
                 <a href="#" className="text-[#94a3b8] hover:text-[#22c55e] transition-colors" aria-label="GitHub">
                   <Github className="w-5 h-5" />
@@ -34,9 +40,6 @@ export function Footer() {
 
             {/* RIGHT: Tagline - BIG with Glow */}
             <div className="flex flex-col items-center justify-center px-4 md:px-8 py-4">
-              <p className="text-[#f8fafc] text-center font-bold text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-relaxed max-w-2xl mb-3">
-                &ldquo;<span className="glow-in-green">In</span>telligent, <span className="glow-in-blue">In</span>sightful and <span className="glow-in-purple">In</span>spired&rdquo;
-              </p>
               <p className="text-[#94a3b8] text-center font-bold italic text-base md:text-lg lg:text-xl leading-relaxed max-w-2xl">
                 Dedicated to a Smarter, More Sustainable Energy Future
               </p>
@@ -69,7 +72,12 @@ export function Footer() {
 
         {/* Bottom */}
         <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-[#94a3b8]">
-          <p>&copy; 2025 Inergy. All rights reserved.</p>
+          <div className="flex flex-col gap-1">
+            <p>&copy; 2025 Enerwyse. All rights reserved.</p>
+            <p className="text-xs text-[#64748b]">
+              Enerwyse operating under 1001435754 ONTARIO INC.
+            </p>
+          </div>
           <div className="flex gap-6">
             <a href="/privacy-policy" className="hover:text-[#22c55e] transition-colors">Privacy Policy</a>
             <a href="/terms-of-service" className="hover:text-[#22c55e] transition-colors">Terms of Service</a>

@@ -27,7 +27,7 @@ export function Proof() {
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-4xl text-[#f8fafc] mb-4">
-            Why teams choose Inspired Energy Optimizer for pilots
+            Why teams choose Enerwyse for pilots
           </h2>
         </div>
 

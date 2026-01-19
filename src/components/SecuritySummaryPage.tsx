@@ -31,7 +31,7 @@ export function SecuritySummaryPage() {
             {/* Introduction */}
             <div className="frosted-glass rounded-2xl p-8 mb-12 border border-[#334155]">
               <p className="text-[#f8fafc] text-lg leading-relaxed mb-4">
-                This document outlines the security controls and practices implemented by Inspired Energy Optimizer in support of Green Button Connect My Data (CMD) integration. Our security framework is designed to protect customer information, ensure data integrity, and comply with utility data-sharing requirements.
+                This document outlines the security controls and practices implemented by Enerwyse in support of Green Button Connect My Data (CMD) integration. Our security framework is designed to protect customer information, ensure data integrity, and comply with utility data-sharing requirements.
               </p>
             </div>
 

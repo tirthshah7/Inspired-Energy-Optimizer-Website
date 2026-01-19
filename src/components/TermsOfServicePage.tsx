@@ -31,7 +31,7 @@ export function TermsOfServicePage() {
             {/* Introduction */}
             <div className="frosted-glass rounded-2xl p-8 mb-12 border border-[#334155]">
               <p className="text-[#f8fafc] text-lg leading-relaxed mb-4">
-                These Terms and Conditions ("Terms") govern your use of the Inspired Energy Optimizer platform ("the Platform"). By creating an account or connecting your utility data using Green Button CMD, you agree to these Terms.
+                These Terms and Conditions ("Terms") govern your use of the Enerwyse platform ("the Platform"). By creating an account or connecting your utility data using Green Button CMD, you agree to these Terms.
               </p>
             </div>
 
@@ -182,7 +182,7 @@ export function TermsOfServicePage() {
               </h2>
               <div className="frosted-glass rounded-xl p-6 border border-[#334155]">
                 <p className="text-[#94a3b8] text-lg leading-relaxed mb-4">
-                  All algorithms, software, designs, and content on the Platform are owned by Inspired Energy Optimizer.
+                  All algorithms, software, designs, and content on the Platform are owned by Enerwyse.
                 </p>
                 <p className="text-[#94a3b8] text-lg leading-relaxed font-semibold text-[#ef4444]">
                   You may not copy, reverse-engineer, or resell the platform or its outputs.
@@ -276,7 +276,10 @@ export function TermsOfServicePage() {
                 <p className="text-[#94a3b8] text-lg mb-6">For questions, support, or legal notices:</p>
                 <div className="space-y-4">
                   <div>
-                    <p className="text-[#f8fafc] font-semibold text-lg mb-2">Inspired Energy Optimizer</p>
+                    <p className="text-[#f8fafc] font-semibold text-lg mb-2">Enerwyse</p>
+                    <p className="text-[#94a3b8] text-sm mb-2">
+                      Operating under 1001435754 ONTARIO INC.
+                    </p>
                     <a 
                       href="mailto:theinspiredtechlabs@gmail.com" 
                       className="text-[#22c55e] hover:text-[#38bdf8] transition-colors text-lg"

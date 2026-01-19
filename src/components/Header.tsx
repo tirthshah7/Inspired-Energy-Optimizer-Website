@@ -46,8 +46,8 @@ export function Header() {
               <Zap className="w-5 h-5 text-white" />
             </div>
             <div className="flex flex-col">
-              <span className="text-[#f8fafc] tracking-tight font-semibold text-lg">Inergy</span>
-              <span className="text-[#94a3b8] text-xs tracking-tight">Inspired Energy Optimizer</span>
+              <span className="text-[#f8fafc] tracking-tight font-semibold text-lg">Enerwyse</span>
+              <span className="text-[#94a3b8] text-xs tracking-tight">Intelligent Energy</span>
             </div>
           </Link>
 
