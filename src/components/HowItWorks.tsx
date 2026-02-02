@@ -4,26 +4,26 @@ import { Link } from 'react-router-dom';
 const steps = [
   {
     icon: Calendar,
-    title: 'Book a Demo',
-    description: 'Use the form to schedule a 30-minute walkthrough with the founder.',
+    title: 'Understand Your Energy Patterns',
+    description: 'Start with a short walkthrough to understand your facility, systems, and energy challenges with the founder.',
     color: '#22c55e',
   },
   {
     icon: FolderInput,
-    title: 'Share Sample Data',
-    description: 'We review 1–3 months of interval data and building info (under NDA if required).',
+    title: 'Analyze Your Existing Data',
+    description: 'We review recent meter and system data to identify usage patterns, inefficiencies, and early opportunities.',
     color: '#38bdf8',
   },
   {
     icon: Brain,
-    title: 'Configure Your Pilot',
-    description: 'We set up dashboards, alerts, and playbooks tailored to your sites.',
+    title: 'Configure Operational Views & Alerts',
+    description: 'Dashboards, alerts, and action lists are tailored to your facility’s operating schedule and priorities.',
     color: '#a855f7',
   },
   {
     icon: TrendingUp,
-    title: 'Run a 6–12 Week Pilot',
-    description: 'Track actions taken, estimated savings ranges, and next-phase roadmap.',
+    title: 'Track Actions & Measured Impact',
+    description: 'Monitor actions taken, expected savings ranges, and operational improvements over time.',
     color: '#22c55e',
   },
 ];
@@ -37,7 +37,7 @@ export function HowItWorks() {
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl text-[#f8fafc] mb-4">
-            How a Pilot with Enerwyse Works
+            How Enerwyse Fits Into Your Operations
           </h2>
         </div>
 
@@ -125,13 +125,13 @@ export function HowItWorks() {
         <div className="mt-16 text-center">
           <div className="frosted-glass rounded-2xl p-8 inline-block border border-[#334155]">
             <p className="text-[#94a3b8] mb-4">
-              Interested in a pilot for 1–5 buildings in Ontario or nearby regions?
+              Interested in starting with one facility in Ontario or nearby regions?
             </p>
             <Link
               to="/contact#demo-form"
               className="inline-block px-8 py-3 rounded-lg gradient-primary text-white hover:glow-soft transition-all"
             >
-              Request a Pilot Discussion
+              Start with a Facility Walkthrough
             </Link>
           </div>
         </div>

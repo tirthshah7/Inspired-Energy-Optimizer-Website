@@ -54,15 +54,18 @@ export function Hero() {
           <div className="space-y-8">
             <div className="space-y-6">
               <div className="inline-block px-6 py-2 rounded-full bg-[#22c55e]/10 border border-[#22c55e]/30 text-[#22c55e] mb-4">
-                For Commercial, Industrial & Campus Facilities
+                For Greenhouses, Commercial & Industrial Sites
               </div>
               <h1 className="text-5xl lg:text-6xl text-[#f8fafc] tracking-tight">
-                AI Energy Intelligence for Your Entire Portfolio
+                Forecast, Detect, and Reduce Energy Waste — in Real Time
               </h1>
               <p className="text-xl text-[#94a3b8] max-w-xl">
                 Enerwyse connects to your meters and building systems to surface
                 real, actionable opportunities to cut energy waste and operating costs — without
                 installing new hardware.
+              </p>
+              <p className="text-xl text-[#94a3b8] max-w-xl">
+                Built in Canada — supporting local businesses in achieving sustainable energy goals.
               </p>
               <p className="text-lg text-[#22c55e] font-semibold max-w-xl">
                 Smarter Energy. Cleaner World.
@@ -72,15 +75,15 @@ export function Hero() {
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-[#22c55e] mt-2 flex-shrink-0" />
-                  <span className="text-[#f8fafc]">Portfolio-wide visibility in a single control panel</span>
+                  <span className="text-[#f8fafc]">Track energy and load patterns as conditions change</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-[#22c55e] mt-2 flex-shrink-0" />
-                  <span className="text-[#f8fafc]">AI-driven forecasting and anomaly detection</span>
+                  <span className="text-[#f8fafc]">Forecast demand and flag abnormal spikes</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-[#22c55e] mt-2 flex-shrink-0" />
-                  <span className="text-[#f8fafc]">Clear playbooks with estimated savings for each action</span>
+                  <span className="text-[#f8fafc]">Turn insights into practical operating actions</span>
                 </div>
               </div>
             </div>
@@ -91,7 +94,7 @@ export function Hero() {
                 to="/contact#demo-form"
                 className="px-8 py-4 rounded-xl gradient-primary text-white hover:glow-soft transition-all"
               >
-                Book a 30-Minute Demo
+                Talk with Us
               </Link>
               <a
                 href="https://youtu.be/V71PE_jFGdU?si=cZBEBzkUNpRjG8O4"

@@ -30,7 +30,9 @@ export function ProblemSolution() {
             Energy data is everywhere. Insight isn't.
           </h2>
           <p className="text-xl text-[#94a3b8] max-w-3xl mx-auto">
-            Utility portals, BMS trends, CSV exports — but no clear answer to "what should we do this week?"
+            Most facilities don’t need more dashboards — they need clear decisions.
+            <br />
+            Utility portals, BMS trends, CSV exports — but no clear answer to "what should we do this week?".
           </p>
         </div>
 
@@ -69,8 +71,8 @@ export function ProblemSolution() {
                   Enerwyse turns raw data into a weekly action list.
                 </h3>
                 <p className="text-xl text-[#94a3b8] mb-6">
-                  We centralize your building and energy data, run AI models on top, and surface
-                  the 3–10 highest-impact opportunities your team can act on — with clear next steps.
+                We centralize your energy and operational data, apply forecasting and anomaly detection models, 
+                and surface the 3–10 highest-impact actions your team can take — with clear, practical next steps.
                 </p>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="flex items-start gap-3">
@@ -97,8 +99,8 @@ export function ProblemSolution() {
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#22c55e] mt-2" />
                     <div>
-                      <div className="text-[#f8fafc] mb-1">Portfolio-wide view</div>
-                      <div className="text-sm text-[#94a3b8]">Know which sites to prioritize this quarter.</div>
+                      <div className="text-[#f8fafc] mb-1">Facility-focused insights</div>
+                      <div className="text-sm text-[#94a3b8]">Start with one site and expand as your operations grow.</div>
                     </div>
                   </div>
                 </div>

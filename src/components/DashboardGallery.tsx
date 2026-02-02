@@ -16,10 +16,10 @@ import {
 import { Building2, Lightbulb, TrendingDown } from 'lucide-react';
 
 const portfolioData = [
-  { name: 'Building A', value: 450 },
-  { name: 'Building B', value: 380 },
-  { name: 'Building C', value: 290 },
-  { name: 'Building D', value: 520 },
+  { name: 'Propagation Zone', value: 450 },
+  { name: 'Vegetative Zone', value: 380 },
+  { name: 'Flowering Zone', value: 290 },
+  { name: 'Packing & Support Area', value: 520 },
 ];
 
 const timeSeriesData = [
@@ -32,29 +32,29 @@ const timeSeriesData = [
 ];
 
 const pieData = [
-  { name: 'HVAC', value: 42, color: '#a855f7' },
-  { name: 'Lighting', value: 28, color: '#38bdf8' },
-  { name: 'Equipment', value: 20, color: '#22c55e' },
-  { name: 'Other', value: 10, color: '#94a3b8' },
+  { name: 'Climate Control instead of HVAC', value: 42, color: '#a855f7' },
+  { name: 'Grow Lighting', value: 28, color: '#38bdf8' },
+  { name: 'Pumps & Irrigation', value: 20, color: '#22c55e' },
+  { name: 'Auxiliary Systems', value: 10, color: '#94a3b8' },
 ];
 
 const recommendations = [
   {
     icon: Lightbulb,
-    title: 'Optimize HVAC Schedule',
-    description: 'Potential savings: $2,400/month',
+    title: 'Adjust Grow Lighting Schedule',
+    description: 'Shift supplemental lighting by 1 hour to avoid peak tariff window. Estimated impact: ~$1,800/month',
     impact: 'High',
   },
   {
     icon: TrendingDown,
-    title: 'Reduce Peak Demand',
-    description: 'Shift EV charging to off-peak',
+    title: 'Optimize Climate Control Setpoints',
+    description: 'Reduce heating setpoint by 1°C during low-occupancy night hours. Estimated impact: ~$950/month',
     impact: 'Medium',
   },
   {
     icon: Building2,
-    title: 'Building 3 Baseline Review',
-    description: 'Usage 15% above expected',
+    title: 'Investigate Irrigation Pump Runtime',
+    description: 'Pump activity detected outside scheduled irrigation window.Potential issue: Excess runtime increasing base load',
     impact: 'High',
   },
 ];
@@ -80,7 +80,7 @@ export function DashboardGallery() {
           {/* Portfolio Overview */}
           <div className="frosted-glass rounded-2xl p-6 border-2 border-[#a855f7]/20 glow-soft">
             <div className="flex items-center justify-between mb-6">
-              <h3 className="text-xl text-[#f8fafc]">Portfolio Overview</h3>
+              <h3 className="text-xl text-[#f8fafc]">Energy Load by Operational Zone</h3>
               <div className="text-sm text-[#94a3b8]">Last 24 hours</div>
             </div>
             <ResponsiveContainer width="100%" height={300}>
@@ -170,7 +170,7 @@ export function DashboardGallery() {
         {/* Time Series Chart */}
         <div className="frosted-glass rounded-2xl p-6 border-2 border-[#22c55e]/20 glow-soft mb-8">
           <div className="flex items-center justify-between mb-6">
-            <h3 className="text-xl text-[#f8fafc]">Performance vs. Baseline</h3>
+            <h3 className="text-xl text-[#f8fafc]">Actual Energy Use vs Expected Baseline</h3>
             <div className="flex gap-4 text-sm">
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 rounded-full bg-[#94a3b8]" />
@@ -228,9 +228,13 @@ export function DashboardGallery() {
           </div>
         </div>
 
+        <p className="text-xs text-[#94a3b8] text-center mt-6 mb-8 max-w-2xl mx-auto">
+          *Charts shown use representative greenhouse data. Actual views adapt to your systems, zones, and operating schedules.
+        </p>
+
         {/* Recommendations Panel */}
         <div className="frosted-glass rounded-2xl p-6 border-2 border-[#a855f7]/20">
-          <h3 className="text-xl text-[#f8fafc] mb-6">AI-Powered Recommendations</h3>
+          <h3 className="text-xl text-[#f8fafc] mb-6">Recommended Operational Actions</h3>
           <div className="grid md:grid-cols-3 gap-4">
             {recommendations.map((rec, index) => {
               const Icon = rec.icon;

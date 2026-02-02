@@ -13,11 +13,11 @@ export function FinalCTA() {
           {/* Main CTA Card */}
           <div className="gradient-card frosted-glass rounded-3xl p-12 border-2 border-[#22c55e]/30 glow-primary text-center">
             <h2 className="text-5xl text-[#f8fafc] mb-6">
-              Ready to explore a pilot for your buildings?
+              Let’s Talk About Your Energy Operations
             </h2>
             <p className="text-xl text-[#94a3b8] mb-8 max-w-2xl mx-auto">
-              Share a few details about your portfolio and we'll follow up with a tailored demo
-              and a suggested pilot plan.
+              Share a bit about your facility and how you operate today.
+              We’ll walk through where energy is typically lost and what’s realistically actionable — no commitment required.
             </p>
 
             {/* Benefits List */}
@@ -35,19 +35,13 @@ export function FinalCTA() {
               ))}
             </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4 justify-center">
+            {/* CTA Button */}
+            <div className="flex justify-center">
               <Link
                 to="/contact#demo-form"
                 className="px-10 py-4 rounded-xl gradient-primary text-white text-lg hover:glow-soft transition-all"
               >
-                Book a 30-Minute Demo
-              </Link>
-              <Link
-                to="/contact"
-                className="px-10 py-4 rounded-xl border-2 border-[#334155] text-[#f8fafc] text-lg hover:border-[#22c55e] transition-all"
-              >
-                Talk to Us First
+                Talk With Us
               </Link>
             </div>
 

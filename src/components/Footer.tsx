@@ -1,4 +1,4 @@
-import { Zap, Linkedin, Github, X, Instagram, MessageCircle } from 'lucide-react';
+import { Zap, Linkedin, Github, X, Instagram, MessageCircle, Download } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -16,14 +16,22 @@ export function Footer() {
                   <span className="text-[#94a3b8] text-xs">Intelligent Energy</span>
                 </div>
               </div>
-              <p className="text-[#94a3b8] text-sm mb-6 leading-relaxed">
+              <p className="text-[#94a3b8] text-sm mb-4 leading-relaxed">
                 AI Energy Intelligence for Buildings and Industrial Sites
               </p>
+              <a
+                href="/logo-icon.png"
+                download="Enerwyse-Logo.png"
+                className="inline-flex items-center gap-2 text-sm text-[#94a3b8] hover:text-[#22c55e] transition-colors mb-6"
+              >
+                <Download className="w-4 h-4" />
+                Download logo
+              </a>
               <div className="flex gap-4">
                 <a href="#" className="text-[#94a3b8] hover:text-[#22c55e] transition-colors" aria-label="LinkedIn">
                   <Linkedin className="w-5 h-5" />
                 </a>
-                <a href="#" className="text-[#94a3b8] hover:text-[#22c55e] transition-colors" aria-label="X (formerly Twitter)">
+                {/*<a href="#" className="text-[#94a3b8] hover:text-[#22c55e] transition-colors" aria-label="X (formerly Twitter)">
                   <X className="w-5 h-5" />
                 </a>
                 <a href="#" className="text-[#94a3b8] hover:text-[#22c55e] transition-colors" aria-label="Reddit">
@@ -34,7 +42,7 @@ export function Footer() {
                 </a>
                 <a href="#" className="text-[#94a3b8] hover:text-[#22c55e] transition-colors" aria-label="GitHub">
                   <Github className="w-5 h-5" />
-                </a>
+                </a>*/}
               </div>
             </div>
 

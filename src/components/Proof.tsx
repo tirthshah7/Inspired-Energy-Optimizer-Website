@@ -2,19 +2,19 @@ import { Check } from 'lucide-react';
 
 const proofPoints = [
   'Cloud-based — no new meters or hardware required.',
-  'Works alongside existing BMS, utility portals, and spreadsheets.',
-  'Designed for small pilots that can expand to portfolio scale.',
-  'Founder-led onboarding and support during early customers.',
+  'Works alongside your current tools.',
+  'Structured to start small, with a clear path to expansion.',
+  'Direct founder involvement during early deployments.',
 ];
 
 const faqItems = [
   {
-    question: 'What does a typical pilot look like?',
-    answer: 'Most pilots run for 6–12 weeks with 1–5 buildings. We focus on quick wins and a clear summary of actions, estimated savings ranges, and next steps.',
+    question: 'What does getting started look like?',
+    answer: 'Most engagements begin with a limited set of facilities over a defined period. The focus is on identifying quick, practical actions, estimating savings ranges, and outlining next steps for continued improvement.',
   },
   {
     question: 'Do we need IT resources to get started?',
-    answer: 'Usually not. For most pilots we work with your energy or facilities team to access existing data exports or portals. API integrations can come later.',
+    answer: 'Usually not. In most cases, we work directly with energy or facilities teams using existing data exports or portal access. Deeper integrations and APIs can be explored later if needed.',
   },
 ];
 
@@ -27,7 +27,7 @@ export function Proof() {
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-4xl text-[#f8fafc] mb-4">
-            Why teams choose Enerwyse for pilots
+            Why teams Work with Enerwyse
           </h2>
         </div>
 

@@ -22,7 +22,7 @@ const values = [
   {
     icon: Zap,
     title: 'Scalability',
-    description: 'Architecture designed for portfolios, not just individual meters.',
+    description: 'Built to scale from a single site to multi-site operations.',
     color: '#22c55e',
   },
   {
@@ -50,7 +50,7 @@ export function AboutPage() {
               Built for the Next Era of Energy Intelligence
             </h1>
             <p className="text-xl text-[#94a3b8] max-w-3xl mx-auto">
-              Enerwyse is an AI-first energy intelligence platform being built in Windsor, Ontario — designed with real operators, real buildings, and real grid challenges in mind.
+              Enerwyse is a machine-learning powered energy intelligence platform being built in Windsor, Ontario — designed with real operators, real facilities, and real grid challenges in mind.
             </p>
           </div>
         </div>
@@ -65,11 +65,10 @@ export function AboutPage() {
                 Our Vision
               </div>
               <h2 className="text-4xl text-[#f8fafc] mb-6">
-                To make every building run intelligently
+                To make every facility run intelligently
               </h2>
               <p className="text-xl text-[#94a3b8] mb-4">
-                From high-rises to factories to campuses — we envision a world where buildings run intelligently, 
-                efficiently, and sustainably through advanced AI-driven insights that are easy for teams to act on.
+                From greenhouses to commercial sites to light industry — we envision facilities that run more efficiently and sustainably through forecasting, anomaly detection, and operator-friendly insights.
               </p>
               <p className="text-xl text-[#94a3b8]">
                 Enerwyse focuses on turning fragmented data into clear, confident decisions — not more dashboards to stare at.
@@ -114,8 +113,8 @@ export function AboutPage() {
                 Empower organizations with actionable intelligence
               </h2>
               <p className="text-xl text-[#94a3b8]">
-                Our mission is to empower operations and sustainability teams with real-time visibility, predictive intelligence, 
-                and action-first recommendations that reduce waste, cut operational costs, and support a more resilient grid.
+                Our mission is to empower operations and sustainability teams with practical visibility, predictive forecasting, 
+                and action-first recommendations that reduce waste, cut operating costs, and support a more resilient grid.
               </p>
             </div>
 
@@ -155,7 +154,7 @@ export function AboutPage() {
             </h2>
             <div className="space-y-6 text-xl text-[#94a3b8]">
               <p>
-                The energy grid is under unprecedented pressure. Buildings still waste a significant share of the power they consume, 
+                The energy grid is under unprecedented pressure. Facilities still waste a significant share of the power they consume, 
                 and operators are expected to manage increasingly complex systems — often with outdated tools and disconnected data.
               </p>
               <p>
@@ -164,7 +163,7 @@ export function AboutPage() {
               </p>
               <p>
                 We are building a platform that uses machine learning, forecasting, and anomaly detection to turn raw 
-                time-series data into live, actionable intelligence — focused on what to do next, not just what happened yesterday.
+                time-series data into actionable intelligence — focused on what to do next, not just what happened yesterday.
               </p>
               <div className="frosted-glass rounded-xl p-8 border-2 border-[#22c55e]/30">
                 <div className="grid md:grid-cols-3 gap-6 text-center">
@@ -175,7 +174,7 @@ export function AboutPage() {
                     <div className="text-[#f8fafc] mb-2">No heavy IT projects to get started.</div>
                   </div>
                   <div>
-                    <div className="text-[#f8fafc] mb-2">Just smarter operations, starting with your first pilot site.</div>
+                    <div className="text-[#f8fafc] mb-2">Just smarter operations, starting with your first site.</div>
                   </div>
                 </div>
               </div>
@@ -229,18 +228,17 @@ export function AboutPage() {
               <Users className="w-10 h-10 text-white" />
             </div>
             <h2 className="text-4xl text-[#f8fafc] mb-6">
-              Be an early partner in the future of energy intelligence
+              Work with us as an early partner
             </h2>
             <p className="text-xl text-[#94a3b8] mb-8">
-              We are actively looking for forward-thinking facility and energy teams to co-design the next generation of 
-              AI-driven operations. As an early partner, you get direct input into the roadmap and tailored support for your sites.
+              We’re looking for forward-thinking facility teams — starting with greenhouse operators — to shape Enerwyse’s early roadmap. As an early partner, you’ll get direct input, founder-led support, and a clear plan to turn your data into measurable operational improvements.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <a
                 href="/contact"
                 className="px-10 py-4 rounded-xl gradient-primary text-white hover:glow-soft transition-all"
               >
-                Become a Pilot Partner
+                Become an Early Partner
               </a>
               <a
                 href="/contact"

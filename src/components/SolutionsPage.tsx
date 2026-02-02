@@ -1,45 +1,66 @@
-import { Building, Factory, School, Check } from 'lucide-react';
+import { Building, Factory, School, Sprout, Check } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 const solutions = [
   {
+    icon: Sprout,
+    title: 'Greenhouses & Controlled-Environment Agriculture',
+    headline: 'Optimize energy without guessing against crop cycles.',
+    description:
+      'Enerwyse helps greenhouse operators align heating, lighting, ventilation, and dehumidification with real operating patterns — while keeping plant quality and comfort constraints in mind.',
+    benefits: [
+      'Align lighting and heating schedules with growth stages and tariffs.',
+      'Detect off-schedule runtime in fans, boilers, pumps, and dehumidifiers.',
+      'Track energy intensity by zone to pinpoint the highest-impact improvements.',
+    ],
+    image:
+      'https://images.unsplash.com/photo-1524593166156-312f362cada0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmVlbmhvdXNlfGVufDF8fHx8MTc2NDQ0Mjg1NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    color: '#22c55e',
+  },
+  {
     icon: Building,
     title: 'Commercial Buildings',
     headline: 'Give your operations team a clear, shared view.',
-    description: 'For offices, mixed-use sites, and retail, the platform helps align energy, operations, and tenant-experience teams around the same live data.',
+    description:
+      'For offices, mixed-use sites, and retail, the platform helps align energy, operations, and tenant-experience teams around the same live data.',
     benefits: [
       'Uncover scheduling gaps in HVAC and lighting.',
       'Track comfort-related issues against equipment behavior.',
       'Support ESG reporting with simple visual exports.',
     ],
-    image: 'https://images.unsplash.com/photo-1694702740570-0a31ee1525c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBidWlsZGluZ3xlbnwxfHx8fDE3NjQzNzUwNTR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    color: '#22c55e',
+    image:
+      'https://images.unsplash.com/photo-1694702740570-0a31ee1525c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBidWlsZGluZ3xlbnwxfHx8fDE3NjQzNzUwNTR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    color: '#38bdf8',
   },
   {
     icon: Factory,
     title: 'Industrial & Manufacturing',
     headline: 'See how energy is tied to the way you run lines.',
-    description: 'Connect energy behavior to production schedules to find low-risk ways to trim energy without disrupting throughput.',
+    description:
+      'Connect energy behavior to production schedules to find low-risk ways to trim energy without disrupting throughput.',
     benefits: [
       'Map energy usage to shifts and production runs.',
       'Highlight high-load steps to optimize first.',
       'Flag off-shift loads and leaks.',
     ],
-    image: 'https://images.unsplash.com/photo-1764114235916-74de69e6851f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwZmFjdG9yeSUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzY0MzkyNjQ1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    color: '#38bdf8',
+    image:
+      'https://images.unsplash.com/photo-1764114235916-74de69e6851f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwZmFjdG9yeSUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzY0MzkyNjQ1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    color: '#a855f7',
   },
   {
     icon: School,
-    title: 'Campuses & Multi-Site Portfolios',
+    title: 'Campuses & Multi-Site Operations',
     headline: 'One place to compare, prioritize, and report.',
-    description: 'For campuses and portfolios, the platform provides a consistent view across very different buildings.',
+    description:
+      'For campuses and multi-site operations, Enerwyse provides a consistent view across different buildings and systems.',
     benefits: [
       'Benchmark sites on normalized metrics.',
-      'Quickly identify the 5–10 buildings with highest opportunity.',
+      'Quickly identify the top opportunities to tackle first.',
       'Provide stakeholders with simple, shareable visuals.',
     ],
-    image: 'https://images.unsplash.com/photo-1762264644182-475f505feabb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbmVyZ3klMjBidWlsZGluZyUyMG5pZ2h0fGVufDF8fHx8MTc2NDQ0Mjg1NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    color: '#a855f7',
+    image:
+      'https://images.unsplash.com/photo-1762264644182-475f505feabb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbmVyZ3klMjBidWlsZGluZyUyMG5pZ2h0fGVufDF8fHx8MTc2NDQ0Mjg1NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    color: '#38bdf8',
   },
 ];
 
@@ -57,11 +78,11 @@ export function SolutionsPage() {
               Solutions
             </div>
             <h1 className="text-5xl lg:text-6xl text-[#f8fafc] mb-6">
-              Tailored to the Way Your Facilities Operate
+              Built Around How Your Facility Actually Runs
             </h1>
             <p className="text-xl text-[#94a3b8] max-w-3xl mx-auto">
-              Whether you manage a single flagship building or a regional portfolio, Enerwyse
-              adapts to your data and operating reality — not the other way around.
+              Whether you operate a single site or multiple locations, Enerwyse adapts to your data and
+              day-to-day workflows — not the other way around.
             </p>
           </div>
         </div>
@@ -129,7 +150,13 @@ export function SolutionsPage() {
                     href="/contact#demo-form"
                     className="inline-block mt-8 px-8 py-3 rounded-xl border-2 border-[#334155] text-[#f8fafc] hover:border-[#22c55e] hover:glow-soft transition-all"
                   >
-                    {index === 0 ? 'Discuss a Commercial Pilot' : index === 1 ? 'Discuss an Industrial Pilot' : 'Discuss a Campus Pilot'}
+                    {index === 0
+                      ? 'Discuss a Greenhouse Setup'
+                      : index === 1
+                        ? 'Discuss a Commercial Setup'
+                        : index === 2
+                          ? 'Discuss an Industrial Setup'
+                          : 'Discuss a Campus Setup'}
                   </a>
                 </div>
               </div>
@@ -177,24 +204,24 @@ export function SolutionsPage() {
         <div className="container mx-auto relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl text-[#f8fafc] mb-6">
-              See how this fits your specific portfolio.
+              See how this fits your facility.
             </h2>
             <p className="text-xl text-[#94a3b8] mb-8">
-              Share your facility type, number of sites, and current tools, and we'll suggest a
-              pilot structure that makes sense for you.
+              Share your facility type, key systems, and what data you can access today — and we’ll recommend
+              a practical first step that matches your operations.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <a
                 href="/contact#demo-form"
                 className="px-10 py-4 rounded-xl gradient-primary text-white hover:glow-soft transition-all"
               >
-                Book a Solutions Call
+                Start a Conversation
               </a>
               <a
                 href="/contact"
                 className="px-10 py-4 rounded-xl border-2 border-[#334155] text-[#f8fafc] hover:border-[#22c55e] transition-all"
               >
-                Send Us a Question
+                Ask a Question
               </a>
             </div>
           </div>

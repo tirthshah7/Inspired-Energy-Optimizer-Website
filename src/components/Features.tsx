@@ -71,16 +71,16 @@ export function Features() {
         {/* Additional Feature Highlights */}
         <div className="mt-16 grid md:grid-cols-3 gap-6 text-center">
           <div>
-            <div className="text-4xl text-[#22c55e] mb-2">Pilot-ready</div>
-            <div className="text-[#94a3b8]">Ideal for 1–5 initial buildings</div>
+            <div className="text-4xl text-[#22c55e] mb-2">Deployment-ready</div>
+            <div className="text-[#94a3b8]">Ideal for initial facilities and phased rollouts</div>
           </div>
           <div>
-            <div className="text-4xl text-[#38bdf8] mb-2">Cloud-hosted</div>
-            <div className="text-[#94a3b8]">No on-site hardware</div>
+            <div className="text-4xl text-[#38bdf8] mb-2">Cloud-hosted & Secure</div>
+            <div className="text-[#94a3b8]">Encrypted data handling with controlled access.</div>
           </div>
           <div>
-            <div className="text-4xl text-[#a855f7] mb-2">Portfolio-minded</div>
-            <div className="text-[#94a3b8]">Built to scale as you grow</div>
+            <div className="text-4xl text-[#a855f7] mb-2">Built to Scale</div>
+            <div className="text-[#94a3b8]">Works for one facility or many</div>
           </div>
         </div>
       </div>
