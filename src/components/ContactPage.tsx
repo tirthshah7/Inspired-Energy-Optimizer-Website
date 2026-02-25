@@ -5,7 +5,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Email',
-    detail: 'info@enerwyse.ca',
+    detail: 'sales@enerwyse.ca',
     color: '#22c55e',
   },
   {
