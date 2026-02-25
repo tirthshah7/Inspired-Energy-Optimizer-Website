@@ -5,7 +5,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Email',
-    detail: 'theinspiredtechlabs@gmail.com',
+    detail: 'info@enerwyse.ca',
     color: '#22c55e',
   },
   {
