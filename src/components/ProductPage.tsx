@@ -10,6 +10,8 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 import { Activity, TrendingUp, AlertTriangle, Lightbulb, Building2, Zap, Shield } from 'lucide-react';
+import { SEO } from './SEO';
+import { analyticsEvents, trackEvent } from '../lib/analytics';
 
 const forecastData = [
   { time: '00:00', actual: 145, forecast: null },
@@ -55,9 +57,33 @@ const recommendations = [
   },
 ];
 
+const productStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Enerwyse Energy Operations Command Center',
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Web',
+  url: 'https://www.enerwyse.ca/product',
+  description:
+    'Ontario-focused energy operations software for GA peak avoidance, anomaly detection, forecasting, and weekly operating recommendations.',
+};
+
 export function ProductPage() {
   return (
     <div className="min-h-screen bg-[#0f172a]">
+      <SEO
+        title="Product — GA Peak Avoidance and Energy Intelligence | Enerwyse"
+        description="Forecast IESO coincident peaks, detect baseload drift, and turn meter data into weekly operating actions for Ontario C&I facilities."
+        path="/product"
+        keywords={[
+          'GA peak avoidance software',
+          'IESO peak forecasting',
+          'energy anomaly detection',
+          'Ontario meter data analytics',
+          'C&I energy operations',
+        ]}
+        structuredData={productStructuredData}
+      />
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6 bg-gradient-to-b from-[#0f172a] to-[#111827] relative overflow-hidden">
         <div className="floating-blob w-96 h-96 bg-[#a855f7] top-20 right-20" />
@@ -76,6 +102,7 @@ export function ProductPage() {
             </p>
             <a 
               href="/contact#demo-form"
+              onClick={() => trackEvent(analyticsEvents.demoCtaClick, { location: 'product_hero' })}
               className="inline-block px-8 py-4 rounded-xl gradient-primary text-white hover:glow-soft transition-all"
             >
               See the Product in a Live Demo
@@ -397,6 +424,7 @@ export function ProductPage() {
             </p>
             <a
               href="/contact#demo-form"
+              onClick={() => trackEvent(analyticsEvents.demoCtaClick, { location: 'product_bottom_cta' })}
               className="inline-block px-10 py-4 rounded-xl gradient-primary text-white hover:glow-soft transition-all"
             >
               Book a Product Demo

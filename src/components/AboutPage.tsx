@@ -1,4 +1,5 @@
 import { Target, Lightbulb, Users, Shield, Zap, TrendingUp } from 'lucide-react';
+import { SEO } from './SEO';
 
 const values = [
   {
@@ -36,6 +37,11 @@ const values = [
 export function AboutPage() {
   return (
     <div className="min-h-screen bg-[#0f172a]">
+      <SEO
+        title="About Enerwyse — Built in Windsor, Ontario"
+        description="Enerwyse is an AI energy intelligence platform built in Windsor, Ontario for facility operators who need clear, actionable energy decisions — not more dashboards."
+        path="/about"
+      />
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6 bg-gradient-to-b from-[#0f172a] to-[#111827] relative overflow-hidden">
         <div className="floating-blob w-96 h-96 bg-[#22c55e] top-20 -left-20" />

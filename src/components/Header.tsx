@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Zap, Menu, X } from 'lucide-react';
+import { analyticsEvents, trackEvent } from '../lib/analytics';
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -87,6 +88,7 @@ export function Header() {
             </Link>
             <Link
               to="/contact"
+              onClick={() => trackEvent(analyticsEvents.demoCtaClick, { location: 'desktop_header' })}
               className="px-5 py-2 rounded-lg gradient-primary text-white hover:glow-soft transition-all"
             >
               Book Demo
@@ -179,7 +181,10 @@ export function Header() {
                 <div className="pt-4 border-t border-[#334155]">
                   <Link
                     to="/contact"
-                    onClick={() => setMobileMenuOpen(false)}
+                    onClick={() => {
+                      trackEvent(analyticsEvents.demoCtaClick, { location: 'mobile_header' });
+                      setMobileMenuOpen(false);
+                    }}
                     className="block w-full px-4 py-3 rounded-lg gradient-primary text-white hover:glow-soft transition-all text-center"
                     style={{ pointerEvents: 'auto', cursor: 'pointer' }}
                   >

@@ -1,32 +1,51 @@
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 import { useState } from 'react';
+import { SEO } from './SEO';
+import { analyticsEvents, trackEvent } from '../lib/analytics';
 
 const contactInfo = [
   {
     icon: Mail,
     title: 'Email',
     detail: 'sales@enerwyse.ca',
+    href: 'mailto:sales@enerwyse.ca',
+    eventName: analyticsEvents.emailClick,
     color: '#22c55e',
   },
   {
     icon: Phone,
     title: 'Phone',
     detail: '+1 (226) 724-2781',
+    href: 'tel:+12267242781',
+    eventName: analyticsEvents.phoneClick,
     color: '#38bdf8',
   },
   {
     icon: MapPin,
     title: 'Location',
     detail: 'Windsor, Ontario',
+    href: null,
+    eventName: null,
     color: '#a855f7',
   },
   {
     icon: Clock,
     title: 'Response Time',
     detail: 'Within 24 hours',
+    href: null,
+    eventName: null,
     color: '#22c55e',
   },
 ];
+
+const contactStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: 'Book a 20-minute Enerwyse discovery call',
+  url: 'https://www.enerwyse.ca/contact',
+  description:
+    'Contact Enerwyse to discuss Ontario C&I energy data, Global Adjustment exposure, and pilot options.',
+};
 
 export function ContactPage() {
   const [formData, setFormData] = useState({
@@ -44,6 +63,9 @@ export function ContactPage() {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
+    trackEvent(analyticsEvents.contactFormSubmit, {
+      facility_type: formData.facilityType || 'unspecified',
+    });
 
     try {
       const response = await fetch('https://formspree.io/f/mvgerekn', {
@@ -60,6 +82,9 @@ export function ContactPage() {
 
       if (response.ok) {
         setSubmitStatus('success');
+        trackEvent(analyticsEvents.contactFormSuccess, {
+          facility_type: formData.facilityType || 'unspecified',
+        });
         // Reset form
         setFormData({
           name: '',
@@ -70,10 +95,18 @@ export function ContactPage() {
         });
       } else {
         setSubmitStatus('error');
+        trackEvent(analyticsEvents.contactFormError, {
+          facility_type: formData.facilityType || 'unspecified',
+          reason: 'non_200_response',
+        });
       }
     } catch (error) {
       console.error('Form submission error:', error);
       setSubmitStatus('error');
+      trackEvent(analyticsEvents.contactFormError, {
+        facility_type: formData.facilityType || 'unspecified',
+        reason: 'network_or_client_error',
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -88,6 +121,18 @@ export function ContactPage() {
 
   return (
     <div className="min-h-screen bg-[#0f172a]">
+      <SEO
+        title="Contact Enerwyse — Book a Demo | Energy Intelligence for Ontario C&I"
+        description="Book a 20-minute call to discuss your energy data, estimate savings potential, and explore a pilot. We respond within 24 hours."
+        path="/contact"
+        keywords={[
+          'book energy demo Ontario',
+          'Global Adjustment savings assessment',
+          'Ontario C&I energy pilot',
+          'greenhouse energy software demo',
+        ]}
+        structuredData={contactStructuredData}
+      />
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6 bg-gradient-to-b from-[#0f172a] to-[#111827] relative overflow-hidden">
         <div className="floating-blob w-96 h-96 bg-[#38bdf8] top-20 -left-20" />
@@ -124,6 +169,22 @@ export function ContactPage() {
 
               {contactInfo.map((info, index) => {
                 const Icon = info.icon;
+                const detail = info.href ? (
+                  <a
+                    href={info.href}
+                    onClick={() => {
+                      if (info.eventName) {
+                        trackEvent(info.eventName, { location: 'contact_info' });
+                      }
+                    }}
+                    className="text-[#f8fafc] hover:text-[#22c55e] transition-colors"
+                  >
+                    {info.detail}
+                  </a>
+                ) : (
+                  <div className="text-[#f8fafc]">{info.detail}</div>
+                );
+
                 return (
                   <div
                     key={index}
@@ -138,7 +199,7 @@ export function ContactPage() {
                       </div>
                       <div>
                         <div className="text-[#94a3b8] text-sm mb-1">{info.title}</div>
-                        <div className="text-[#f8fafc]">{info.detail}</div>
+                        {detail}
                       </div>
                     </div>
                   </div>
@@ -240,11 +301,10 @@ export function ContactPage() {
                       className="w-full px-4 py-3 bg-[#0f172a] border border-[#334155] rounded-lg text-[#f8fafc] focus:border-[#22c55e] focus:outline-none transition-all"
                     >
                       <option value="">Select a facility type</option>
+                      <option value="greenhouse">Greenhouse / Controlled-Environment Agriculture</option>
                       <option value="commercial">Commercial Building</option>
                       <option value="industrial">Industrial / Manufacturing</option>
                       <option value="campus">Campus / Multi-Site Portfolio</option>
-                      <option value="healthcare">Healthcare Facility</option>
-                      <option value="education">Educational Institution</option>
                       <option value="other">Other</option>
                     </select>
                   </div>
@@ -265,18 +325,12 @@ export function ContactPage() {
                     />
                   </div>
 
-                  {/* File Upload Suggestion */}
+                  {/* Data Prep Note */}
                   <div className="bg-[#0f172a] border border-[#334155] rounded-lg p-4">
                     <div className="text-[#94a3b8] text-sm mb-2">Optional:</div>
                     <p className="text-[#f8fafc] text-sm">
-                      Attach a month of sample energy data to receive insights in your demo
+                      Mention what data you can access today, such as Green Button CMD, interval meter exports, utility portal CSVs, or recent bills.
                     </p>
-                    <button
-                      type="button"
-                      className="mt-3 px-4 py-2 border border-[#334155] rounded-lg text-[#f8fafc] text-sm hover:border-[#22c55e] transition-all"
-                    >
-                      Upload Data (CSV, PDF)
-                    </button>
                   </div>
 
                   {/* Submit Button */}
@@ -297,7 +351,7 @@ export function ContactPage() {
                   )}
                   {submitStatus === 'error' && (
                     <div className="p-4 bg-[#ef4444]/10 border border-[#ef4444]/30 rounded-lg text-[#ef4444] text-center">
-                      Something went wrong. Please email us directly at theinspiredtechlabs@gmail.com
+                      Something went wrong. Please email us directly at sales@enerwyse.ca
                     </div>
                   )}
 
@@ -324,7 +378,8 @@ export function ContactPage() {
                 Schedule a quick 15-minute intro call to see if a pilot makes sense for your facility.
               </p>
               <a
-                href="/contact"
+                href="/contact#demo-form"
+                onClick={() => trackEvent(analyticsEvents.demoCtaClick, { location: 'contact_bottom_banner' })}
                 className="inline-block px-8 py-3 rounded-xl border-2 border-[#22c55e] text-[#22c55e] hover:bg-[#22c55e]/10 transition-all"
               >
                 Request a Call Slot

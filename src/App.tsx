@@ -11,6 +11,47 @@ import { HowItWorks } from './components/HowItWorks';
 import { UseCases } from './components/UseCases';
 import { Proof } from './components/Proof';
 import { FinalCTA } from './components/FinalCTA';
+import { SEO } from './components/SEO';
+
+const siteUrl = 'https://www.enerwyse.ca';
+
+const homeStructuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Enerwyse',
+    url: siteUrl,
+    inLanguage: 'en-CA',
+    description:
+      'Ontario-native energy intelligence for commercial, industrial, and greenhouse operators.',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'Enerwyse',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Web',
+    url: siteUrl,
+    areaServed: {
+      '@type': 'AdministrativeArea',
+      name: 'Ontario',
+    },
+    audience: {
+      '@type': 'BusinessAudience',
+      audienceType: 'Ontario commercial, industrial, and greenhouse operators',
+    },
+    offers: {
+      '@type': 'Offer',
+      availability: 'https://schema.org/InStock',
+      priceSpecification: {
+        '@type': 'PriceSpecification',
+        priceCurrency: 'CAD',
+      },
+    },
+    description:
+      'Energy intelligence software that forecasts IESO coincident peak windows, flags anomalies, and helps Ontario C&I facilities reduce Global Adjustment exposure.',
+  },
+];
 
 // Lazy load page components for better performance
 const ProductPage = lazy(() => import('./components/ProductPage').then(module => ({ default: module.ProductPage })));
@@ -37,6 +78,20 @@ function PageLoader() {
 function HomePage() {
   return (
     <main>
+      <SEO
+        title="Enerwyse — Cut Global Adjustment Costs for Ontario C&I Facilities"
+        description="AI energy intelligence for Ontario commercial, industrial, and greenhouse operators. Forecast IESO coincident peaks, detect anomalies, reduce GA exposure. Built in Windsor."
+        path="/"
+        keywords={[
+          'Global Adjustment',
+          'IESO coincident peak',
+          'Ontario energy intelligence',
+          'greenhouse energy management',
+          'commercial electricity savings Ontario',
+          'Class A Global Adjustment',
+        ]}
+        structuredData={homeStructuredData}
+      />
       <Hero />
       <ProblemSolution />
       <Features />

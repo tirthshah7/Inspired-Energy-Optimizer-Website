@@ -1,5 +1,7 @@
 import { Building, Factory, School, Sprout, Check } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { SEO } from './SEO';
+import { analyticsEvents, trackEvent } from '../lib/analytics';
 
 const solutions = [
   {
@@ -64,9 +66,31 @@ const solutions = [
   },
 ];
 
+const solutionsStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Enerwyse Solutions for Ontario C&I Facilities',
+  url: 'https://www.enerwyse.ca/solutions',
+  description:
+    'Vertical-specific energy intelligence for Ontario greenhouses, commercial buildings, industrial sites, and campuses.',
+};
+
 export function SolutionsPage() {
   return (
     <div className="min-h-screen bg-[#0f172a]">
+      <SEO
+        title="Ontario Energy Solutions for Greenhouses and C&I Facilities | Enerwyse"
+        description="GA-aware energy intelligence for Ontario greenhouses, commercial buildings, industrial sites, and campuses. Reduce load during peak windows and catch waste faster."
+        path="/solutions"
+        keywords={[
+          'Ontario greenhouse energy management',
+          'commercial building energy Ontario',
+          'industrial energy management Ontario',
+          'campus energy optimization',
+          'Global Adjustment greenhouses',
+        ]}
+        structuredData={solutionsStructuredData}
+      />
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6 bg-gradient-to-b from-[#0f172a] to-[#111827] relative overflow-hidden">
         <div className="floating-blob w-96 h-96 bg-[#38bdf8] top-20 -left-20" />
@@ -148,6 +172,11 @@ export function SolutionsPage() {
 
                   <a
                     href="/contact#demo-form"
+                    onClick={() =>
+                      trackEvent(analyticsEvents.solutionCtaClick, {
+                        vertical: solution.title,
+                      })
+                    }
                     className="inline-block mt-8 px-8 py-3 rounded-xl border-2 border-[#334155] text-[#f8fafc] hover:border-[#22c55e] hover:glow-soft transition-all"
                   >
                     {index === 0
@@ -213,12 +242,14 @@ export function SolutionsPage() {
             <div className="flex flex-wrap gap-4 justify-center">
               <a
                 href="/contact#demo-form"
+                onClick={() => trackEvent(analyticsEvents.demoCtaClick, { location: 'solutions_bottom_primary' })}
                 className="px-10 py-4 rounded-xl gradient-primary text-white hover:glow-soft transition-all"
               >
                 Start a Conversation
               </a>
               <a
                 href="/contact"
+                onClick={() => trackEvent(analyticsEvents.demoCtaClick, { location: 'solutions_bottom_secondary' })}
                 className="px-10 py-4 rounded-xl border-2 border-[#334155] text-[#f8fafc] hover:border-[#22c55e] transition-all"
               >
                 Ask a Question

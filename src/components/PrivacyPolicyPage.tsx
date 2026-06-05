@@ -1,13 +1,19 @@
 import { Shield, Lock, Eye, Trash2, Mail } from 'lucide-react';
+import { SEO } from './SEO';
 
 export function PrivacyPolicyPage() {
   return (
     <div className="min-h-screen bg-[#0f172a]">
+      <SEO
+        title="Privacy Policy | Enerwyse"
+        description="How Enerwyse collects, uses, and protects your data, including Green Button CMD energy data. PIPEDA compliant."
+        path="/privacy-policy"
+      />
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6 bg-gradient-to-b from-[#0f172a] to-[#111827] relative overflow-hidden">
         <div className="floating-blob w-96 h-96 bg-[#a855f7] top-20 -left-20" />
         <div className="floating-blob w-80 h-80 bg-[#22c55e] top-40 right-20" style={{ animationDelay: '5s' }} />
-        
+
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block px-6 py-2 rounded-full bg-[#a855f7]/10 border border-[#a855f7]/30 text-[#a855f7] mb-6">

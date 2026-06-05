@@ -1,4 +1,5 @@
-import { Zap, Linkedin, Github, X, Instagram, MessageCircle, Download } from 'lucide-react';
+import { Zap, Download } from 'lucide-react';
+import { analyticsEvents, trackEvent } from '../lib/analytics';
 
 export function Footer() {
   return (
@@ -22,28 +23,12 @@ export function Footer() {
               <a
                 href="/logo-icon.png"
                 download="Enerwyse-Logo.png"
+                onClick={() => trackEvent(analyticsEvents.logoDownloadClick, { location: 'footer' })}
                 className="inline-flex items-center gap-2 text-sm text-[#94a3b8] hover:text-[#22c55e] transition-colors mb-6"
               >
                 <Download className="w-4 h-4" />
                 Download logo
               </a>
-              <div className="flex gap-4">
-                <a href="#" className="text-[#94a3b8] hover:text-[#22c55e] transition-colors" aria-label="LinkedIn">
-                  <Linkedin className="w-5 h-5" />
-                </a>
-                {/*<a href="#" className="text-[#94a3b8] hover:text-[#22c55e] transition-colors" aria-label="X (formerly Twitter)">
-                  <X className="w-5 h-5" />
-                </a>
-                <a href="#" className="text-[#94a3b8] hover:text-[#22c55e] transition-colors" aria-label="Reddit">
-                  <MessageCircle className="w-5 h-5" />
-                </a>
-                <a href="#" className="text-[#94a3b8] hover:text-[#22c55e] transition-colors" aria-label="Instagram">
-                  <Instagram className="w-5 h-5" />
-                </a>
-                <a href="#" className="text-[#94a3b8] hover:text-[#22c55e] transition-colors" aria-label="GitHub">
-                  <Github className="w-5 h-5" />
-                </a>*/}
-              </div>
             </div>
 
             {/* RIGHT: Tagline - BIG with Glow */}

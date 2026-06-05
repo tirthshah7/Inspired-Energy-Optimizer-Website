@@ -1,8 +1,14 @@
 import { Shield, Lock, Server, Key, Eye, Database, AlertTriangle, Cloud, CheckCircle } from 'lucide-react';
+import { SEO } from './SEO';
 
 export function SecuritySummaryPage() {
   return (
     <div className="min-h-screen bg-[#0f172a]">
+      <SEO
+        title="Security Summary | Enerwyse"
+        description="Enerwyse security practices: AES-256 encryption at rest, TLS 1.2+ in transit, RBAC, audit logging, and SOC 2 / ISO 27001 certified sub-processors."
+        path="/security"
+      />
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6 bg-gradient-to-b from-[#0f172a] to-[#111827] relative overflow-hidden">
         <div className="floating-blob w-96 h-96 bg-[#38bdf8] top-20 -left-20" />

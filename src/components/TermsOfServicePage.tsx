@@ -1,8 +1,14 @@
 import { FileText, CheckCircle, Shield, Key, Database, AlertTriangle, XCircle, Mail, Scale } from 'lucide-react';
+import { SEO } from './SEO';
 
 export function TermsOfServicePage() {
   return (
     <div className="min-h-screen bg-[#0f172a]">
+      <SEO
+        title="Terms of Service | Enerwyse"
+        description="Terms and conditions for using the Enerwyse energy intelligence platform."
+        path="/terms-of-service"
+      />
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6 bg-gradient-to-b from-[#0f172a] to-[#111827] relative overflow-hidden">
         <div className="floating-blob w-96 h-96 bg-[#a855f7] top-20 -left-20" />
