@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Play, Activity, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { analyticsEvents, trackEvent } from '../lib/analytics';
 import {
   LineChart,
   Line,
@@ -54,36 +55,34 @@ export function Hero() {
           <div className="space-y-8">
             <div className="space-y-6">
               <div className="inline-block px-6 py-2 rounded-full bg-[#22c55e]/10 border border-[#22c55e]/30 text-[#22c55e] mb-4">
-                For Greenhouses, Commercial & Industrial Sites
+                For Ontario Commercial, Industrial, and Greenhouse Operators
               </div>
               <h1 className="text-5xl lg:text-6xl text-[#f8fafc] tracking-tight">
-                Forecast, Detect, and Reduce Energy Waste — in Real Time
+                Cut your hydro bill by reducing Global Adjustment exposure.
               </h1>
               <p className="text-xl text-[#94a3b8] max-w-xl">
-                Enerwyse connects to your meters and building systems to surface
-                real, actionable opportunities to cut energy waste and operating costs — without
-                installing new hardware.
+                Enerwyse connects to your existing meter data, forecasts IESO
+                coincident peak windows, and tells your operations team when to
+                reduce load. No new hardware. Built in Windsor, Ontario.
               </p>
-              <p className="text-xl text-[#94a3b8] max-w-xl">
-                Built in Canada — supporting local businesses in achieving sustainable energy goals.
+              <p className="text-lg text-[#94a3b8] max-w-xl">
+                Typical savings: 5–15% of Global Adjustment charges — roughly
+                $10K–$30K per year on a $200K hydro bill.
               </p>
-              <p className="text-lg text-[#22c55e] font-semibold max-w-xl">
-                Smarter Energy. Cleaner World.
-              </p>
-              
+
               {/* Value Points */}
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-[#22c55e] mt-2 flex-shrink-0" />
-                  <span className="text-[#f8fafc]">Track energy and load patterns as conditions change</span>
+                  <span className="text-[#f8fafc]">Forecast IESO coincident peaks before they hit</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-[#22c55e] mt-2 flex-shrink-0" />
-                  <span className="text-[#f8fafc]">Forecast demand and flag abnormal spikes</span>
+                  <span className="text-[#f8fafc]">Detect anomalies and load drift in real time</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-[#22c55e] mt-2 flex-shrink-0" />
-                  <span className="text-[#f8fafc]">Turn insights into practical operating actions</span>
+                  <span className="text-[#f8fafc]">Turn meter data into a weekly operating action list</span>
                 </div>
               </div>
             </div>
@@ -92,14 +91,16 @@ export function Hero() {
             <div className="flex flex-wrap gap-4">
               <Link
                 to="/contact#demo-form"
+                onClick={() => trackEvent(analyticsEvents.demoCtaClick, { location: 'hero_primary' })}
                 className="px-8 py-4 rounded-xl gradient-primary text-white hover:glow-soft transition-all"
               >
-                Talk with Us
+                Book a 20-minute call
               </Link>
               <a
                 href="https://youtu.be/V71PE_jFGdU?si=cZBEBzkUNpRjG8O4"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackEvent(analyticsEvents.videoCtaClick, { location: 'hero_secondary' })}
                 className="px-8 py-4 rounded-xl border border-[#334155] text-[#f8fafc] hover:border-[#22c55e] transition-all flex items-center gap-2"
               >
                 <Play className="w-4 h-4" />
