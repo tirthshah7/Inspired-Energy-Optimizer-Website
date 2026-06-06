@@ -63,7 +63,7 @@ export function Hero() {
                 For Ontario Commercial, Industrial, and Greenhouse Operators
               </div>
               <h1 className="text-5xl lg:text-6xl text-[#f8fafc] tracking-tight">
-                Cut your hydro bill by reducing Global Adjustment exposure.
+                Cut your hydro bill. Predict every peak before it hits.
               </h1>
               <p className="text-xl text-[#94a3b8] max-w-xl">
                 Enerwyse connects to your existing meter data, forecasts IESO
