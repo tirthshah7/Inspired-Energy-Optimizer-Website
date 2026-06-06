@@ -1,4 +1,4 @@
-import { Target, Lightbulb, Users, Shield, Zap, TrendingUp } from 'lucide-react';
+import { Target, Lightbulb, Users, Shield, Zap, TrendingUp, Linkedin } from 'lucide-react';
 import { SEO } from './SEO';
 
 const values = [
@@ -62,8 +62,36 @@ export function AboutPage() {
         </div>
       </section>
 
-      {/* Vision Section */}
+      {/* Built by Section */}
       <section className="py-20 px-6 bg-[#111827]">
+        <div className="container mx-auto">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-8">
+              <div className="inline-block px-4 py-2 rounded-full bg-[#22c55e]/10 border border-[#22c55e]/30 text-[#22c55e] mb-4">
+                Built by
+              </div>
+            </div>
+            <div className="frosted-glass rounded-2xl p-8 md:p-12 border border-[#334155]">
+              <h3 className="text-3xl text-[#f8fafc] mb-4">Tirth Shah</h3>
+              <p className="text-xl text-[#94a3b8] mb-6 leading-relaxed">
+                Tirth is a systems engineer based in Windsor, Ontario. He holds an MEng in Electrical and Computer Engineering from the University of Windsor, bringing operational engineering rigor to Enerwyse.
+              </p>
+              <a
+                href="https://www.linkedin.com/in/tirth-shah-555133166/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-[#38bdf8] hover:text-[#22c55e] transition-colors"
+              >
+                <Linkedin className="w-4 h-4" />
+                <span>Connect on LinkedIn</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Vision Section */}
+      <section className="py-20 px-6 bg-[#0f172a]">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
