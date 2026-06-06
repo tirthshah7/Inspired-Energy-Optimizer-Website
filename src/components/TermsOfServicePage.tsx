@@ -24,7 +24,7 @@ export function TermsOfServicePage() {
               Terms and Conditions
             </h1>
             <p className="text-xl text-[#94a3b8] max-w-3xl mx-auto">
-              Last updated: December 7th, 2025
+              Last updated: June 2026
             </p>
           </div>
         </div>
@@ -286,11 +286,11 @@ export function TermsOfServicePage() {
                     <p className="text-[#94a3b8] text-sm mb-2">
                       Operating under 1001435754 ONTARIO INC.
                     </p>
-                    <a 
-                      href="mailto:theinspiredtechlabs@gmail.com" 
+                    <a
+                      href="mailto:tirth.shah@enerwyse.ca"
                       className="text-[#22c55e] hover:text-[#38bdf8] transition-colors text-lg"
                     >
-                      theinspiredtechlabs@gmail.com
+                      tirth.shah@enerwyse.ca
                     </a>
                   </div>
                 </div>

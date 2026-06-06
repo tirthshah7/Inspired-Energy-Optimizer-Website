@@ -1,4 +1,4 @@
-import { Zap, Download } from 'lucide-react';
+import { Zap, Download, Linkedin } from 'lucide-react';
 import { analyticsEvents, trackEvent } from '../lib/analytics';
 
 export function Footer() {
@@ -20,15 +20,26 @@ export function Footer() {
               <p className="text-[#94a3b8] text-sm mb-4 leading-relaxed">
                 AI Energy Intelligence for Buildings and Industrial Sites
               </p>
-              <a
-                href="/logo-icon.png"
-                download="Enerwyse-Logo.png"
-                onClick={() => trackEvent(analyticsEvents.logoDownloadClick, { location: 'footer' })}
-                className="inline-flex items-center gap-2 text-sm text-[#94a3b8] hover:text-[#22c55e] transition-colors mb-6"
-              >
-                <Download className="w-4 h-4" />
-                Download logo
-              </a>
+              <div className="flex items-center gap-4 mb-6">
+                <a
+                  href="/logo-icon.png"
+                  download="Enerwyse-Logo.png"
+                  onClick={() => trackEvent(analyticsEvents.logoDownloadClick, { location: 'footer' })}
+                  className="inline-flex items-center gap-2 text-sm text-[#94a3b8] hover:text-[#22c55e] transition-colors"
+                >
+                  <Download className="w-4 h-4" />
+                  Download logo
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/enerwyse/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm text-[#94a3b8] hover:text-[#22c55e] transition-colors"
+                >
+                  <Linkedin className="w-4 h-4" />
+                  LinkedIn
+                </a>
+              </div>
             </div>
 
             {/* RIGHT: Tagline - BIG with Glow */}

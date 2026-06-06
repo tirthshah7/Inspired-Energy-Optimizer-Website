@@ -7,8 +7,8 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Email',
-    detail: 'sales@enerwyse.ca',
-    href: 'mailto:sales@enerwyse.ca',
+    detail: 'tirth.shah@enerwyse.ca',
+    href: 'mailto:tirth.shah@enerwyse.ca',
     eventName: analyticsEvents.emailClick,
     color: '#22c55e',
   },
@@ -351,7 +351,7 @@ export function ContactPage() {
                   )}
                   {submitStatus === 'error' && (
                     <div className="p-4 bg-[#ef4444]/10 border border-[#ef4444]/30 rounded-lg text-[#ef4444] text-center">
-                      Something went wrong. Please email us directly at sales@enerwyse.ca
+                      Something went wrong. Please email us directly at tirth.shah@enerwyse.ca
                     </div>
                   )}
 

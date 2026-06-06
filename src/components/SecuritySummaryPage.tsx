@@ -24,7 +24,7 @@ export function SecuritySummaryPage() {
               Your Security is Our Priority
             </h1>
             <p className="text-xl text-[#94a3b8] max-w-3xl mx-auto">
-              Last updated: December 7th, 2025
+              Last updated: June 2026
             </p>
           </div>
         </div>
