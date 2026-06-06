@@ -11,6 +11,8 @@ import { HowItWorks } from './components/HowItWorks';
 import { UseCases } from './components/UseCases';
 import { Proof } from './components/Proof';
 import { FinalCTA } from './components/FinalCTA';
+import { AIManager } from './components/AIManager';
+import { PilotOffer } from './components/PilotOffer';
 import { SEO } from './components/SEO';
 
 const siteUrl = 'https://www.enerwyse.ca';
@@ -94,10 +96,12 @@ function HomePage() {
       />
       <Hero />
       <ProblemSolution />
+      <AIManager />
       <Features />
       <DashboardGallery />
       <HowItWorks />
       <UseCases />
+      <PilotOffer />
       <Proof />
       <FinalCTA />
     </main>

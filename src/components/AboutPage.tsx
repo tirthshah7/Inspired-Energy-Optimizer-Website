@@ -168,8 +168,11 @@ export function AboutPage() {
                 <span className="text-[#22c55e]">"What if buildings could think ahead?"</span>
               </p>
               <p>
-                We are building a platform that uses machine learning, forecasting, and anomaly detection to turn raw 
+                We are building a platform that uses machine learning, forecasting, and anomaly detection to turn raw
                 time-series data into actionable intelligence — focused on what to do next, not just what happened yesterday.
+              </p>
+              <p>
+                Today, Enerwyse is built around a single product idea: a 24/7 AI energy manager that watches your meter data, catches anomalies in real time, predicts costly peak windows, and answers your energy questions in plain English — for a fraction of the cost of hiring an energy expert.
               </p>
               <div className="frosted-glass rounded-xl p-8 border-2 border-[#22c55e]/30">
                 <div className="grid md:grid-cols-3 gap-6 text-center">

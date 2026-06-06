@@ -54,7 +54,12 @@ export function Hero() {
           {/* Left Side */}
           <div className="space-y-8">
             <div className="space-y-6">
-              <div className="inline-block px-6 py-2 rounded-full bg-[#22c55e]/10 border border-[#22c55e]/30 text-[#22c55e] mb-4">
+              <div>
+                <span className="inline-block px-6 py-2 rounded-full bg-[#38bdf8]/10 border border-[#38bdf8]/20 text-[#38bdf8]">
+                  Your 24/7 AI Energy Manager
+                </span>
+              </div>
+              <div className="inline-block px-6 py-2 rounded-full bg-[#22c55e]/10 border border-[#22c55e]/30 text-[#22c55e]">
                 For Ontario Commercial, Industrial, and Greenhouse Operators
               </div>
               <h1 className="text-5xl lg:text-6xl text-[#f8fafc] tracking-tight">
