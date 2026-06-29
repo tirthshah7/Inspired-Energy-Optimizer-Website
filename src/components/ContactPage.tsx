@@ -68,15 +68,22 @@ export function ContactPage() {
     });
 
     try {
-      const response = await fetch('https://formspree.io/f/mvgerekn', {
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json',
         },
         body: JSON.stringify({
-          ...formData,
-          _subject: 'New Demo Request - Enerwyse',
+          access_key: '2fe8ee12-c486-4c0d-94a6-3091f9142d91',
+          name: formData.name,
+          email: formData.email,
+          organization: formData.organization,
+          facility_type: formData.facilityType,
+          message: formData.message,
+          subject: 'New Demo Request - Enerwyse',
+          from_name: 'Enerwyse Website Contact Form',
+          botcheck: '',
         }),
       });
 
@@ -230,11 +237,17 @@ export function ContactPage() {
               <div className="frosted-glass rounded-2xl p-8 md:p-12 border border-[#334155] relative">
                 <div className="glow-soft absolute -inset-4 rounded-3xl opacity-10" />
                 
-                <h3 className="text-2xl text-[#f8fafc] mb-8">Book Your Demo</h3>
-                
+                <h3 className="text-2xl text-[#f8fafc] mb-4">Book Your Demo</h3>
+                <p className="text-sm text-[#94a3b8] mb-8">
+                  Prefer email? Reach Tirth directly at{' '}
+                  <a href="mailto:tirth.shah@enerwyse.ca" className="text-[#22c55e] hover:underline">
+                    tirth.shah@enerwyse.ca
+                  </a>
+                </p>
+
                 <form onSubmit={handleSubmit} className="space-y-6 relative">
-                  {/* Honeypot field - prevents spam */}
-                  <input type="text" name="_gotcha" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
+                  {/* Honeypot field - Web3Forms rejects submissions where this is checked */}
+                  <input type="checkbox" name="botcheck" style={{ display: 'none' }} tabIndex={-1} />
                   
                   {/* Name */}
                   <div>
@@ -346,12 +359,12 @@ export function ContactPage() {
                   {/* Success/Error Messages */}
                   {submitStatus === 'success' && (
                     <div className="p-4 bg-[#22c55e]/10 border border-[#22c55e]/30 rounded-lg text-[#22c55e] text-center">
-                      ✓ Thank you! We'll be in touch within 24 hours.
+                        Thank you! Tirth will be in touch within 24 hours. For urgent matters, you can email tirth.shah@enerwyse.ca directly.
                     </div>
                   )}
                   {submitStatus === 'error' && (
                     <div className="p-4 bg-[#ef4444]/10 border border-[#ef4444]/30 rounded-lg text-[#ef4444] text-center">
-                      Something went wrong. Please email us directly at tirth.shah@enerwyse.ca
+                      Something went wrong. Please email Tirth directly at tirth.shah@enerwyse.ca.
                     </div>
                   )}
 
